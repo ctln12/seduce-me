@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_19_152040) do
+ActiveRecord::Schema.define(version: 2019_08_19_152739) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,15 @@ ActiveRecord::Schema.define(version: 2019_08_19_152040) do
     t.datetime "updated_at", null: false
     t.index ["story_id"], name: "index_games_on_story_id"
     t.index ["user_id"], name: "index_games_on_user_id"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.text "content"
+    t.string "seducee_or_seducer"
+    t.bigint "chat_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["chat_id"], name: "index_messages_on_chat_id"
   end
 
   create_table "questions", force: :cascade do |t|
@@ -70,6 +79,7 @@ ActiveRecord::Schema.define(version: 2019_08_19_152040) do
   add_foreign_key "chats", "games"
   add_foreign_key "games", "stories"
   add_foreign_key "games", "users"
+  add_foreign_key "messages", "chats"
   add_foreign_key "questions", "stories"
   add_foreign_key "stories", "users"
 end
