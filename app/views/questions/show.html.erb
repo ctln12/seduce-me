@@ -1,3 +1,5 @@
+<!-- CSS -->
+<!-- https://bootsnipp.com/snippets/exR5v -->
 <!-- METHODS -->
 <% def to_letter(answer) %>
   <% if answer == @question.seducer_answer_A %>
@@ -20,15 +22,24 @@
 <% end %>
 
 <!-- CONTENT -->
-<h1><%= @story.title %></h1>
-<%= image_tag(image_url(@story.photo), size: "350x250") %>
+<div class="card card-story" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path(@story.photo) %>)">
+  <h1><%= @story.title %></h1>
+  <p><%= @story.description %></p>
+  <a href="/stories/<%= @story.id %>/questions/<%= @story.questions[0].id %>"></a>
+</div>
 
-<h3>Question <%= @question.number %> of <%= @story.questions.count %></h3>
+<div class="m-2">
+  <h3>Question <%= @question.number %> of <%= @story.questions.count %></h3>
 
-<div ><em><%= @question.seducee_introduction %></em></div>
-<div><%= @question.seducee_phrase %></div>
+  <div class="seducee">
+    <div class="mb-3"><em><%= @question.seducee_introduction %></em></div>
+    <div class="border border-dark rounded-pill p-2 mb-3"><%= @question.seducee_phrase %></div>
+  </div>
 
-<div><em><%= @question.seducer_introduction %></em></div>
-<div><%= link_to @question.seducer_answer_A, go_to_url(@question.seducer_answer_A) %></div>
-<div><%= link_to @question.seducer_answer_B, go_to_url(@question.seducer_answer_B) %></div>
-<!-- <div><%= @question.correct_answer %></div> -->
+  <div class="seducer text-right">
+    <div class="mb-4"><em><%= @question.seducer_introduction %></em></div>
+    <div class="mb-5"><%= link_to @question.seducer_answer_A, go_to_url(@question.seducer_answer_A), class: "border border-dark rounded-pill p-2" %></div>
+    <div class="mb-4"><%= link_to @question.seducer_answer_B, go_to_url(@question.seducer_answer_B), class: "border border-dark rounded-pill p-2" %></div>
+  </div>
+  <!-- <div><%= @question.correct_answer %></div> -->
+</div>
