@@ -1,17 +1,4 @@
-<h1><%= @story.title %></h1>
-
-<%= image_tag(image_url(@story.photo), size: "350x250") %>
-
-<h3>Question <%= @question.number %> of <%= @story.questions.count %></h3>
-
-<div ><em><%= @question.seducee_introduction %></em></div>
-
-<div><%= @question.seducee_phrase %></div>
-
-<div><em><%= @question.seducer_introduction %></em></div>
-
-<!-- <div><%= @question.correct_answer %></div> -->
-
+<!-- METHODS -->
 <% def to_letter(answer) %>
   <% if answer == @question.seducer_answer_A %>
     <% "A" %>
@@ -23,7 +10,7 @@
 <% def go_to_url(answer) %>
   <% if to_letter(answer) == @question.correct_answer %>
     <% if @question.number < 3 %>
-      <% "/stories/#{@story.id}/questions/#{@story.questions[@question.number].id}" %>
+      <% "/stories/#{@story.id}/questions/#{@question.number + 1}" %>
     <% else %>
       <% "/stories/#{@story.id}/win" %>
     <% end %>
@@ -32,6 +19,16 @@
   <% end %>
 <% end %>
 
-<div><%= link_to @question.seducer_answer_A, go_to_url(@question.seducer_answer_A) %></div>
+<!-- CONTENT -->
+<h1><%= @story.title %></h1>
+<%= image_tag(image_url(@story.photo), size: "350x250") %>
 
+<h3>Question <%= @question.number %> of <%= @story.questions.count %></h3>
+
+<div ><em><%= @question.seducee_introduction %></em></div>
+<div><%= @question.seducee_phrase %></div>
+
+<div><em><%= @question.seducer_introduction %></em></div>
+<div><%= link_to @question.seducer_answer_A, go_to_url(@question.seducer_answer_A) %></div>
 <div><%= link_to @question.seducer_answer_B, go_to_url(@question.seducer_answer_B) %></div>
+<!-- <div><%= @question.correct_answer %></div> -->
