@@ -1,0 +1,8 @@
+<h1>Stories</h1>
+<% @stories.each do |story| %>
+  <div class="card" style="background-image: url('https://aertecsolutions.com/wp-content/uploads/2018/03/cabecera-448.jpg')">
+    <h1><%= story.title %></h1>
+    <p><%= story.description %></p>
+  </div>
+  <% end %>
+
