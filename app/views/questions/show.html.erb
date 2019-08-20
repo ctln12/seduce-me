@@ -1,6 +1,6 @@
 <h1><%= @story.title %></h1>
 
-<%= image_tag("airport.jpg", size: "350x250") %>
+<%= image_tag(image_url(@story.photo), size: "350x250") %>
 
 <h3>Question <%= @question.number %> of <%= @story.questions.count %></h3>
 
