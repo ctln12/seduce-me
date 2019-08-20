@@ -10,5 +10,4 @@ class StoriesControllerTest < ActionDispatch::IntegrationTest
     get stories_show_url
     assert_response :success
   end
-
 end

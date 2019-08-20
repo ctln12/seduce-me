@@ -1,0 +1,15 @@
+<h1><%= @story.title %></h1>
+
+<%= image_tag("airport.jpg", size: "350x250") %>
+
+<h3>Question <%= @question.number %> of <%= @story.questions.count %></h3>
+
+<div ><em><%= @question.seducee_introduction %></em></div>
+
+<div><%= @question.seducee_phrase %></div>
+
+<div><em><%= @question.seducer_introduction %></em></div>
+
+<div><%= @question.seducer_answer_A %></div>
+
+<div><%= @question.seducer_answer_B %></div>
