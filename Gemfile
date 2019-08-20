@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 ruby '2.6.3'
 
+gem 'dotenv-rails', groups: [:development, :test]
+
 gem 'bootsnap', require: false
 gem 'devise'
 gem 'jbuilder', '~> 2.0'
@@ -30,4 +32,8 @@ group :development, :test do
 end
 
 # chat funcionality
+gem 'bootstrap', '~> 4.1.0'
+gem 'jquery-rails'
 gem 'pusher'
+gem 'figaro'
+
