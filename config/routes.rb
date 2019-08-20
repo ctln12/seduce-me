@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   resources :stories, only: [:index] do
     resources :questions, only: [:show]
   end
+  get '/stories/:id/gameover', to: 'stories#gameover'
+  get '/stories/:id/win', to: 'stories#win'
 end
