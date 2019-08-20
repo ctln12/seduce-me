@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   resources :stories, only: [:index] do
     resources :questions, only: [:show]
   end
+  resources :chats
 end
