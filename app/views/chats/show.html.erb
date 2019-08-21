@@ -1,2 +1,14 @@
-<h1>Chats#show</h1>
-<p>Find me in app/views/chats/show.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <div class="chat-header">
+        <h4>#<%= @chat.game.story.title  %> </h4>
+      </div>
+      <div class="messages">
+        <% @chat.messages.each do |message|  %>
+        <%= render "messages/message", message: message %>
+      </div>
+      <div id="create-message"></div>
+    </div>
+  </div>
+</div>
