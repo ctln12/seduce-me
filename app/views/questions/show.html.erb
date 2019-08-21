@@ -28,18 +28,17 @@
   <a href="/stories/<%= @story.id %>/questions/<%= @story.questions[0].id %>"></a>
 </div>
 
-<div class="m-2">
+<div id="question">
   <h3>Question <%= @question.number %> of <%= @story.questions.count %></h3>
 
-  <div class="seducee">
-    <div class="mb-3"><em><%= @question.seducee_introduction %></em></div>
-    <div class="border border-dark rounded-pill p-2 mb-3"><%= @question.seducee_phrase %></div>
-  </div>
-
-  <div class="seducer text-right">
-    <div class="mb-4"><em><%= @question.seducer_introduction %></em></div>
-    <div class="mb-5"><%= link_to @question.seducer_answer_A, go_to_url(@question.seducer_answer_A), class: "border border-dark rounded-pill p-2" %></div>
-    <div class="mb-4"><%= link_to @question.seducer_answer_B, go_to_url(@question.seducer_answer_B), class: "border border-dark rounded-pill p-2" %></div>
-  </div>
+  <ul class="flex-container">
+    <li class="flex-item intro"><em><%= @question.seducee_introduction %></em></li>
+    <li class="flex-item bg-seducee"><%= @question.seducee_phrase %></li>
+  </ul>
+  <ul class="flex-container position-right">
+    <li class="flex-item intro text-right"><em><%= @question.seducer_introduction %></em></li>
+    <li class="flex-item bg-seducer"><%= link_to @question.seducer_answer_A, go_to_url(@question.seducer_answer_A) %></li>
+    <li class="flex-item bg-seducer"><%= link_to @question.seducer_answer_B, go_to_url(@question.seducer_answer_B) %></li>
+  </ul>
   <!-- <div><%= @question.correct_answer %></div> -->
 </div>
