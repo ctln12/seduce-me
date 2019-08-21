@@ -23,7 +23,7 @@ class ChatsController < ApplicationController
   # end
 
   def show
-    @chat = Chat.includes(games: :user).find(params[:id])
+    @chat = Chat.includes(game: :user).find(params[:id])
   end
 
   private

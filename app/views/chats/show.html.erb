@@ -6,7 +6,8 @@
       </div>
       <div class="messages">
         <% @chat.messages.each do |message|  %>
-        <%= render "messages/message", message: message %>
+          <%= render "messages/message", message: message %>
+        <% end %>
       </div>
       <div id="create-message">
         <%= simple_form_for [ @chat, Message.new ], remote: true do |f| %>
