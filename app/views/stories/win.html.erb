@@ -1,2 +1,7 @@
-<h1>Stories#win</h1>
-<p>Find me in app/views/stories/win.html.erb</p>
+<div class="photo" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path(Story.find(params[:id]).photo) %>);">
+<div class="centered">
+  <h1 class="title">Congratulations!</h1>
+  <h3 class="message"> You seduced <%= @story.user.email %>!</h3>
+  <h4 class="button win"><%= link_to "Send a message", "/stories" %></h4>
+</div>
+</div>
