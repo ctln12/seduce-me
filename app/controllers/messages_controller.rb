@@ -3,15 +3,15 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
     @chat = Chat.find(params[:chat_id])
     @message.chat = @chat
-    @message.seducer = current_user == @chat.game.user
+    @message.seducee_or_seducer = current_user == @chat.game.user
     if @message.save
       respond_to do |format|
-        format.html { redirect_to chat_path(@chat)}
+        format.html { redirect_to chat_path(@chat) }
         format.js
       end
     else
       respond_to do |format|
-        format.html { render "chats/show"}
+        format.html { render "chats/show" }
         format.js
       end
     end

@@ -24,6 +24,7 @@ class ChatsController < ApplicationController
 
   def show
     @chat = Chat.includes(game: :user).find(params[:id])
+    @message = Message.new
   end
 
   private
