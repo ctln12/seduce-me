@@ -10,5 +10,7 @@ class StoriesController < ApplicationController
   end
 
   def win
+    @story = Story.find(params[:id])
+    @questions = @story.questions
   end
 end
