@@ -10,7 +10,7 @@
         <% end %>
       </div>
       <div id="create-message">
-        <%= simple_form_for [ @chat, @message ], remote: true do |f| %>
+        <%= simple_form_for [ @chat, Message.new ], remote: true do |f| %>
           <%= f.input :content, as: :string, label: false %>
           <%#= f.button :submit, input_html: { class: "hidden" } %>
         <% end %>
@@ -18,3 +18,11 @@
     </div>
   </div>
 </div>
+<% content_for :after_js do %>
+  <script>
+    App['chat_<%= @chat.id %>'] = App.cable.subscriptions.create(
+      { channel: 'ChatsChannel', chat_id: <%= @chat.id %> },
+      { received: (data) => console.log(data) }
+    )
+  </script>
+<% end %>
