@@ -1,3 +1,5 @@
+<!-- CSS -->
+<!-- https://bootsnipp.com/snippets/exR5v -->
 <!-- METHODS -->
 <% def to_letter(answer) %>
   <% if answer == @question.seducer_answer_A %>
@@ -20,15 +22,23 @@
 <% end %>
 
 <!-- CONTENT -->
-<h1><%= @story.title %></h1>
-<%= image_tag(image_url(@story.photo), size: "350x250") %>
+<div class="card card-story" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path(@story.photo) %>)">
+  <h1><%= @story.title %></h1>
+  <p><%= @story.description %></p>
+  <a href="/stories/<%= @story.id %>/questions/<%= @story.questions[0].id %>"></a>
+</div>
 
-<h3>Question <%= @question.number %> of <%= @story.questions.count %></h3>
+<div id="question">
+  <h3>Question <%= @question.number %> of <%= @story.questions.count %></h3>
 
-<div ><em><%= @question.seducee_introduction %></em></div>
-<div><%= @question.seducee_phrase %></div>
-
-<div><em><%= @question.seducer_introduction %></em></div>
-<div><%= link_to @question.seducer_answer_A, go_to_url(@question.seducer_answer_A) %></div>
-<div><%= link_to @question.seducer_answer_B, go_to_url(@question.seducer_answer_B) %></div>
-<!-- <div><%= @question.correct_answer %></div> -->
+  <ul class="flex-container">
+    <li class="flex-item intro"><em><%= @question.seducee_introduction %></em></li>
+    <li class="flex-item bg-seducee"><%= @question.seducee_phrase %></li>
+  </ul>
+  <ul class="flex-container position-right">
+    <li class="flex-item intro text-right"><em><%= @question.seducer_introduction %></em></li>
+    <li class="flex-item bg-seducer"><%= link_to @question.seducer_answer_A, go_to_url(@question.seducer_answer_A) %></li>
+    <li class="flex-item bg-seducer"><%= link_to @question.seducer_answer_B, go_to_url(@question.seducer_answer_B) %></li>
+  </ul>
+  <!-- <div><%= @question.correct_answer %></div> -->
+</div>
