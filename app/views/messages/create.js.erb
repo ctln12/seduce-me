@@ -1,5 +1,14 @@
 
+function refreshForm(innerHTML) {
+  const newMessageForm = document.getElementById('message_content');
+  newMessageForm.innerHTML = innerHTML;
+  newMessageForm.blur();
+}
 
+function addMessage(messageHTML) {
+  const messagesContainer = document.querySelector('.messages');
+  messagesContainer.insertAdjacentHTML('beforeend', messageHTML);
+}
 
 
 
@@ -8,9 +17,6 @@
   // handle error messages later
 <% else %>
   console.log("goodbye");
-  const messagesContainer = document.querySelector('.messages');
-  messagesContainer.insertAdjacentHTML('beforeend', '<%= j render "message", message: @message %>');
-  const input = document.querySelector('#message_content');
-  input.value = '';
-  input.blur();
+  addMessage('<%= j render "message", message: @message %>')
+  refreshForm('<%= j render "form", chat: @chat, message: @message %>');
 <% end %>
