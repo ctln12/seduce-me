@@ -19,7 +19,10 @@
   <script>
     App['chat_<%= @chat.id %>'] = App.cable.subscriptions.create(
       { channel: 'ChatsChannel', chat_id: <%= @chat.id %> },
-      { received: (data) => console.log(data) }
-    )
+      { received: (data) => {
+        const messagesContainer = document.querySelector('.messages');
+        messagesContainer.insertAdjacentHTML('beforeend', data.message_partial);
+      }
+    })
   </script>
 <% end %>
