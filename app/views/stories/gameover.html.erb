@@ -1,2 +1,7 @@
-<h1>Stories#gameover</h1>
-<p>Find me in app/views/stories/gameover.html.erb</p>
+<div class="photo" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path(Story.find(params[:id]).photo) %>);">
+<div class="centered">
+  <h1 id="gameover">Game Over</h1>
+  <h4 id="score">Your score: <%= @questions[0].number %> / <%= @questions.count %></h4>
+  <h4 id="new-game"><%= link_to "New Game", "/stories" %></h4>
+</div>
+</div>
