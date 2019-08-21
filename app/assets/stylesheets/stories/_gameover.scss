@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Acme|Roboto:300,400,500,700&display=swap');
+
+.photo {
+  height: calc(100vh - 76px);
+  background-size: cover;
+  background-position: top;
+}
+
+.centered {
+  font-family: 'Roboto', sans-serif;
+  position: fixed; /* or absolute */
+  top: 35%;
+  left: 10%;
+  right: 10%;
+  padding: 10px;
+  box-shadow: 1px 2px 5px #6E0000;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #820000;
+  color: #FAFAFA;
+}
+
+#gameover {
+  font-family: 'Acme', sans-serif;
+  line-height: 2;
+  margin-top: 20px;
+}
+
+#score {
+  line-height: 2;
+}
+
+#new-game {
+  border: solid 1px black;
+  border-radius: 40px;
+  margin: 20px 40px 30px 40px;
+  line-height: 2;
+  background-color: #FAFAFA;
+  a {
+    color: #010101;
+  }
+}
