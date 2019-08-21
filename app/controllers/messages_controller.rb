@@ -3,12 +3,8 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
     @chat = Chat.find(params[:chat_id])
     @message.chat = @chat
-    @message.seducee_or_seducer = current_user == @chat.game.user
+    @message.seducer = (current_user == @chat.game.user)
     if @message.save
-      ActionCable.server.broadcast("chat_#{@chat.id}", {
-        message_partial: render(partial: "messages/message",
-        locals: { message: @message })
-      })
       respond_to do |format|
         format.html { redirect_to chat_path(@chat) }
         format.js
