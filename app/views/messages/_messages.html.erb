@@ -1,1 +1,3 @@
-_messages.html.erb
+<div class="message <%= message.from_seducer?(current_user) ? "right" : "" %>">
+  <div class="message-content"></div>
+</div>
