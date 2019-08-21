@@ -1,6 +1,6 @@
 
 function refreshForm(innerHTML) {
-  const newMessageForm = document.getElementById('message_content');
+  const newMessageForm = document.getElementById('create-message');
   newMessageForm.innerHTML = innerHTML;
   newMessageForm.blur();
 }
@@ -17,6 +17,8 @@ function addMessage(messageHTML) {
   // handle error messages later
 <% else %>
   console.log("goodbye");
-  addMessage('<%= j render "message", message: @message %>')
-  refreshForm('<%= j render "form", chat: @chat, message: @message %>');
+  addMessage('<%= j render "message", message: @message %>');
+  const input = document.getElementById('message_content');
+  input.value = '';
+  input.blur();
 <% end %>
