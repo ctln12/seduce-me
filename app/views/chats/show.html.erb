@@ -21,10 +21,9 @@
       { channel: 'ChatsChannel', chat_id: <%= @chat.id %> },
       {
         received: (data) => {
-          if (data.current_user_id !== <%= current_user.id %>) {
-            const messagesContainer = document.querySelector('.messages');
-            messagesContainer.insertAdjacentHTML('beforeend', data.message_partial);
-          }
+          const messagesContainer = document.querySelector('.messages');
+          messagesContainer.insertAdjacentHTML('beforeend', data.message_partial);
+
         }
       }
     )
