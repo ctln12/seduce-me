@@ -2,7 +2,8 @@ class StoriesController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
   def index
     if user_signed_in?
-      @stories = Story.where.not(user: current_user)
+      @stories = Story.where(user: current_user)
+      @games = Game.where(user: current_user)
     else
       @stories = Story.all
     end

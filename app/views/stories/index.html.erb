@@ -1,16 +1,41 @@
+<% unless user_signed_in? %>
 <div class="border border-primary text-primary m-2 p-2 introduction">
   <h1>Test your seducing skills</h1>
   <p>Choose a story then pick the right answers to seduce and maybe meet another lonesome heart</p>
 </div>
+<% else %>
+<!-- Players -->
+<h2>Games played</h2>
+<% if user_signed_in? && current_user.games == [] %>
+  <h5>You haven't played any game yet!</h5>
+<% else %>
+  <% @games.each do |game| %>
+    <div class="card card-story" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path(game.story.photo) %>)">
+      <h2><%= game.story.title %></h2>
+      <p><%= game.story.description %></p>
+      <a href="/stories/<%= game.story.id %>/games" data-method="POST">
+        <div class="play">
+          <i class="fas play-button fa-play"></i>
+        </div>
+      </a>
+    </div>
+  <% end %>
+<% end %>
 
-<% @stories.each do |story| %>
-  <div class="card card-story" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path(story.photo) %>)">
-    <h2><%= story.title %></h2>
-    <p><%= story.description %></p>
-    <a href="/stories/<%= story.id %>/games" data-method="POST">
-      <div class="play">
-        <i class="fas play-button fa-play"></i>
-      </div>
-    </a>
-  </div>
+<!-- Authors -->
+<h2>Stories created</h2>
+<% if user_signed_in? && current_user.stories == [] %>
+  <h5>You haven't created any story yet!</h5>
+<% end %>
+  <% @stories.each do |story| %>
+    <div class="card card-story" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path(story.photo) %>)">
+      <h2><%= story.title %></h2>
+      <p><%= story.description %></p>
+      <a href="/stories/<%= story.id %>/games" data-method="POST">
+        <div class="play">
+          <i class="fas play-button fa-play"></i>
+        </div>
+      </a>
+    </div>
+  <% end %>
 <% end %>
