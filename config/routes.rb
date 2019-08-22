@@ -5,6 +5,9 @@ Rails.application.routes.draw do
     resources :questions, only: [:show]
     resources :games, only: :create
   end
+  resources :chats, only: [:show] do
+    resources :messages, only: [:create]
+  end
   get '/stories/:id/gameover', to: 'stories#gameover'
   get '/stories/:id/win', to: 'stories#win'
 end
