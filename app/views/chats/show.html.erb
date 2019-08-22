@@ -19,13 +19,14 @@
   <script>
     App['chat_<%= @chat.id %>'] = App.cable.subscriptions.create(
       { channel: 'ChatsChannel', chat_id: <%= @chat.id %> },
-      { received: (data) => {
-        if (data.current_user_id !== <%= current_user.id %>) {
-          const messagesContainer = document.querySelector('.messages');
-          messagesContainer.insertAdjacentHTML('beforeend', data.message_partial);
-          scrollLastMessageIntoView();
+      {
+        received: (data) => {
+          if (data.current_user_id !== <%= current_user.id %>) {
+            const messagesContainer = document.querySelector('.messages');
+            messagesContainer.insertAdjacentHTML('beforeend', data.message_partial);
+          }
         }
       }
-    })
+    )
   </script>
 <% end %>

@@ -3,7 +3,15 @@
 // import "popper";
 
 
-import { scrollLastMessageIntoView } from '../plugins/scroll'
+// import { scrollLastMessageIntoView } from '../plugins/scroll';
 
 
-scrollLastMessageIntoView();
+function scrollLastMessageIntoView() {
+  const messages = document.querySelectorAll('.message');
+  const lastMessage = messages[messages.length - 1];
+
+  if (lastMessage !== undefined) {
+    lastMessage.scrollIntoView();
+  }
+}
+
