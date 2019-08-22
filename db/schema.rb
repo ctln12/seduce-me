@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2019_08_21_165555) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -54,6 +55,7 @@ ActiveRecord::Schema.define(version: 2019_08_21_165555) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "number"
+    t.string "correct_answer"
     t.index ["story_id"], name: "index_questions_on_story_id"
   end
 

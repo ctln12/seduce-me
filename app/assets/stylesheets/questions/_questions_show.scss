@@ -1,0 +1,60 @@
+#question {
+  margin: 20px 10px 10px 10px;
+}
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-item {
+  padding: 10px 15px;
+  width: 75%;
+  margin-top: 10px;
+  color: black;
+  text-align: left;
+  border-radius: 20px;
+}
+
+.position-right {
+  align-items: flex-end;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.intro {
+  width: 100%;
+  padding-left: 0px;
+  padding-right: 0px;
+  font-weight: 100;
+}
+
+.bg-seducee {
+  background: #D8D8D8;
+}
+
+.bg-seducer {
+  background: #5BC4F9;
+}
+
+
+li:first-child {
+  margin-top: 0;
+}
+
+#question h3 {
+  margin: 0;
+}
+
+li a {
+  color: white;
+}
+
+.card p {
+  font-weight: 300;
+}
