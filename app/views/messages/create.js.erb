@@ -1,0 +1,34 @@
+
+function refreshForm(innerHTML) {
+  const newMessageForm = document.getElementById('create-message');
+  newMessageForm.innerHTML = innerHTML;
+  newMessageForm.blur();
+}
+
+function addMessage(messageHTML) {
+  const messagesContainer = document.querySelector('.messages');
+  messagesContainer.insertAdjacentHTML('beforeend', messageHTML);
+}
+
+function clearMessage() {
+  const input = document.getElementById('message_content');
+  input.value = '';
+  // input.blur();
+}
+
+function scrollMessagesIntoView() {
+  const messages = document.querySelectorAll('.message');
+  const lastMessage = messages[messages.length - 1];
+  if (lastMessage !== undefined) {
+    lastMessage.scrollIntoView();
+  }
+}
+
+<% if @message.errors.any? %>
+  console.log("hello")
+  // handle error messages later
+<% else %>
+  addMessage('<%= j render "message", message: @message, user_is_messages_author: true %>');
+  clearMessage();
+  scrollMessagesIntoView();
+<% end %>
