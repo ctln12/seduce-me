@@ -7,10 +7,14 @@ class StoriesController < ApplicationController
   def gameover
     @story = Story.find(params[:id])
     @questions = @story.questions
+    @game = Game.where(user: current_user, story: @story).first
   end
 
   def win
     @story = Story.find(params[:id])
     @questions = @story.questions
+    @game = Game.where(user: current_user, story: @story).first
+    @game.score = @questions.count
+    @game.save
   end
 end
