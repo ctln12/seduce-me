@@ -24,11 +24,8 @@ function scrollMessagesIntoView() {
   }
 }
 
-
-
-
 <% if @message.errors.any? %>
-  addMessage('<%= j render "message", message: @message, user_is_messages_author: true %>');
+  console.log("hello")
   // handle error messages later
 <% else %>
   addMessage('<%= j render "message", message: @message, user_is_messages_author: true %>');
