@@ -1,7 +1,7 @@
 .messages {
-  font-size: 14px;
-  color: #868686;
-  background-color: #ffffff;
+  font-size: 1rem;
+  color: black;
+  background-color: #F4F4F4;
   padding: 20px;
   border: 1px solid #ececec;
   border-top: none;
@@ -11,18 +11,20 @@
 }
 
 .message {
+  line-height: 1.5;
   display: flex;
   margin-bottom: 10px;
   &.right {
     flex-direction: row-reverse;
     .message-content {
-      background-color: #F2F9FC;
+      background-color: #5BC4F9;
+      color: white;
     }
   }
 }
 .message-content {
-  background-color: #F7F7F7;
-  border-radius: 3px;
+  background-color: #D8D8D8;
+  border-radius: 10px;
   margin: 0 10px;
   padding: 11px 10px 8px 10px;
 }
@@ -53,7 +55,7 @@ input.form-control {
   }
 }
 .chat-header {
-  background-color: #4F2F4C;
+  // background-color: #4F2F4C;
   color: white;
   padding: 10px 20px;
   margin-top: 10px;
