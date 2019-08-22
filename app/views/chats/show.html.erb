@@ -21,9 +21,11 @@
       { channel: 'ChatsChannel', chat_id: <%= @chat.id %> },
       {
         received: (data) => {
-          const messagesContainer = document.querySelector('.messages');
-          messagesContainer.insertAdjacentHTML('beforeend', data.message_partial);
-
+          console.log(data);
+          if (data.current_user_id !== <%= current_user.id == @chat.game.user.id %>) {
+            const messagesContainer = document.querySelector('.messages');
+            messagesContainer.insertAdjacentHTML('beforeend', data.message_partial);
+          }
         }
       }
     )

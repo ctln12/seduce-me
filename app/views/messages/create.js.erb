@@ -10,7 +10,7 @@ function addMessage(messageHTML) {
   messagesContainer.insertAdjacentHTML('beforeend', messageHTML);
 }
 
-function clearMessage {
+function clearMessage() {
   const input = document.getElementById('message_content');
   input.value = '';
   input.blur();
@@ -24,7 +24,5 @@ function clearMessage {
 <% else %>
   console.log("goodbye");
   addMessage('<%= j render "message", message: @message, user_is_messages_author: true %>');
-  const input = document.getElementById('message_content');
-  input.value = '';
-  input.blur();
+  clearMessage();
 <% end %>
