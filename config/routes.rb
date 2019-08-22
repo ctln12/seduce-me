@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'stories#index'
   resources :stories, only: [:index] do
     resources :questions, only: [:show]
+    resources :games, only: :create
   end
   resources :chats, only: [:show] do
     resources :messages, only: [:create]
