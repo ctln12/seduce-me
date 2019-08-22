@@ -13,16 +13,25 @@ function addMessage(messageHTML) {
 function clearMessage() {
   const input = document.getElementById('message_content');
   input.value = '';
-  input.blur();
+  // input.blur();
+}
+
+function scrollMessagesIntoView() {
+  const messages = document.querySelectorAll('.message');
+  const lastMessage = messages[messages.length - 1];
+  if (lastMessage !== undefined) {
+    lastMessage.scrollIntoView();
+  }
 }
 
 
 
+
 <% if @message.errors.any? %>
-  console.log("hello");
+  addMessage('<%= j render "message", message: @message, user_is_messages_author: true %>');
   // handle error messages later
 <% else %>
-  console.log("goodbye");
   addMessage('<%= j render "message", message: @message, user_is_messages_author: true %>');
   clearMessage();
+  scrollMessagesIntoView();
 <% end %>

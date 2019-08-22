@@ -6,7 +6,7 @@
       </div>
       <div class="messages">
         <% @chat.messages.each do |message|  %>
-          <%= render "messages/message", message: message, user_is_messages_author: current_user == @chat.game.user %>
+          <%= render "messages/message", message: message, user_is_messages_author: current_user == @chat.game.user ? message.seducer : !message.seducer %>
         <% end %>
       </div>
       <div id="create-message">
@@ -17,14 +17,19 @@
 </div>
 <% content_for :after_js do %>
   <script>
+    const messages = document.querySelectorAll('.message');
+    const lastMessage = messages[messages.length - 1];
+    lastMessage.scrollIntoView();
     App['chat_<%= @chat.id %>'] = App.cable.subscriptions.create(
       { channel: 'ChatsChannel', chat_id: <%= @chat.id %> },
       {
         received: (data) => {
-          console.log(data);
           if (data.current_user_id !== <%= current_user.id == @chat.game.user.id %>) {
             const messagesContainer = document.querySelector('.messages');
             messagesContainer.insertAdjacentHTML('beforeend', data.message_partial);
+            const messages = document.querySelectorAll('.message');
+            const lastMessage = messages[messages.length - 1];
+            lastMessage.scrollIntoView();
           }
         }
       }
