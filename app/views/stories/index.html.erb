@@ -4,8 +4,10 @@
   <p>Choose a story then pick the right answers to seduce and maybe meet another lonesome heart</p>
 </div>
 <% else %>
+<!-- Invite to play a new game -->
+<h2><%= link_to "Play a new game", root_path %></h2>
 <!-- Players -->
-<h2>Games played</h2>
+<h3>Games played</h3>
 <% if user_signed_in? && current_user.games == [] %>
   <h5>You haven't played any game yet!</h5>
 <% else %>
@@ -23,10 +25,10 @@
 <% end %>
 
 <!-- Authors -->
-<h2>Stories created</h2>
+<h3>Stories created</h3>
 <% if user_signed_in? && current_user.stories == [] %>
   <h5>You haven't created any story yet!</h5>
-<% end %>
+<% else %>
   <% @stories.each do |story| %>
     <div class="card card-story" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path(story.photo) %>)">
       <h2><%= story.title %></h2>
@@ -38,4 +40,5 @@
       </a>
     </div>
   <% end %>
+<% end %>
 <% end %>
