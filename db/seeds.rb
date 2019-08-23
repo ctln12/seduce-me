@@ -1,4 +1,7 @@
 puts 'Cleaning database...'
+Message.destroy_all
+Chat.destroy_all
+Game.destroy_all
 Question.destroy_all
 Story.destroy_all
 User.destroy_all
