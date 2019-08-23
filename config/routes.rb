@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   end
   get '/stories/:id/gameover', to: 'stories#gameover'
   get '/stories/:id/win', to: 'stories#win'
+
+  mount ActionCable.server => "/cable"
 end
