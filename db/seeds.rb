@@ -15,20 +15,20 @@ mike = User.create!(email: "mike@gmail.com", password: "123456")
 emma = User.create!(email: "emma@gmail.com", password: "123456")
 
 puts 'Creating story 1'
-post_office = Story.create!(title: "At the post office", description: "After an endless wait my turn finally arrives. I walk up to the desk and hand over the notification to get my mail...", photo: "post_office.jpg", user_id: alice.id)
+post_office = Story.create!(title: "At the post office", photo: "post_office.jpg", user_id: alice.id)
 
 puts 'Creating questions of story 1'
-Question.create!(number: 1, seducee_introduction: "Alice a wildlife photographer has just returned from a trip and has to retrieve her mail at the post office.", seducee_phrase: "Ah finally it's my turn...", seducer_introduction: "The office has been busy so the woman's comment annoys you somewhat...", seducer_answer_A: "Good morning to you too!", seducer_answer_B: "How can I help you?", correct_answer: "B", story_id: post_office.id)
+Question.create!(number: 1, seducee_introduction: "Alice a wildlife photographer has just returned from a trip and has to retrieve her mail at the post office but the wait seems endless...", seducee_phrase: "Ah finally it's my turn...", seducer_introduction: "The office has been busy so the woman's comment gets on your nerves. What do you reply?", seducer_answer_A: "What about saying 'Good morning'?", seducer_answer_B: "How can I help you?", correct_answer: "B", story_id: post_office.id)
 Question.create!(number: 2, seducee_introduction: "She hands you a paper...", seducee_phrase: "I'd like to retrieve my mail, please", seducer_introduction: "You notice the delay is passed so you reply", seducer_answer_A: "I'm sorry but you're too late", seducer_answer_B: "I'm afraid you're too late but let me see what I can do", correct_answer: "B", story_id: post_office.id)
-Question.create!(number: 3, seducee_introduction: "You helpful attitude seems to calm her down.", seducee_phrase: "That's very nice of you, thank you!", seducer_introduction: "You would like to see her again. What do you propose?", seducer_answer_A: "Would you go out with me?", seducer_answer_B: "Could I offer you a drink after work?", correct_answer: "A", story_id: post_office.id)
+Question.create!(number: 3, seducee_introduction: "Your helpful attitude seems to calm her down.", seducee_phrase: "That's very nice of you, thank you!", seducer_introduction: "You would like to see her again. What do you propose?", seducer_answer_A: "Would you go out with me?", seducer_answer_B: "Could I offer you a drink after work?", correct_answer: "A", story_id: post_office.id)
 
 
 puts 'Creating story 2'
-beach = Story.create!(title: "At the beach", description: "On holiday in Cancun I just had a swim and I'm walking back to where I left my towel when I notice someone else lying on it...", photo: "beach.jpg", user_id: sarah.id)
+beach = Story.create!(title: "At the beach", photo: "beach.jpg", user_id: sarah.id)
 
 puts 'Questions of story 2'
-Question.create!(number: 1, seducee_introduction: "Sarah, a young businesswoman on holiday feels relaxed after swimming as she walk back to her belongings...", seducee_phrase: "What are you doing on my towel???", seducer_introduction: "She wakes you up from a restful nap... What do you say?", seducer_answer_A: "Are you sure it's yours?", seducer_answer_B: "Can I offer you a drink for my mistake?", correct_answer: "B", story_id: beach.id)
-Question.create!(number: 2, seducee_introduction: "You and Sarah are now at the bar having a lovely conversation when she spills her drink on your shirt...", seducee_phrase: "I'm so sorry!", seducer_introduction: "You jump on your feet because the drink is cold...'", seducer_answer_A: "This makes us even: one mistake all!", seducer_answer_B: "Can't you be more careful! This shirt costs a fortune!", correct_answer: "A", story_id: beach.id)
+Question.create!(number: 1, seducee_introduction: "Sarah a young businesswoman on holiday feels relaxed after swimming as she walk back to her belongings...", seducee_phrase: "What are you doing on my towel???", seducer_introduction: "She wakes you up from a restful nap... What do you say?", seducer_answer_A: "Are you sure it's yours?", seducer_answer_B: "Can I offer you a drink for my mistake?", correct_answer: "B", story_id: beach.id)
+Question.create!(number: 2, seducee_introduction: "You and Sarah are now at the bar having a lovely conversation when she spills her drink on your shirt...", seducee_phrase: "I'm so sorry!", seducer_introduction: "You jump on your feet because the drink is cold...", seducer_answer_A: "This makes us even: one mistake all!", seducer_answer_B: "Can't you be more careful! This shirt costs a fortune!", correct_answer: "A", story_id: beach.id)
 Question.create!(number: 3, seducee_introduction: "You go back to your hotel room to change but you propose to meet again later. She seems uncertain", seducee_phrase: " Sure...", seducer_introduction: "You try to think of something nice to do together", seducer_answer_A: "Shall we have a midnight swim?", seducer_answer_B: "Shall we go dancing?", correct_answer: "A", story_id: beach.id)
 
 
