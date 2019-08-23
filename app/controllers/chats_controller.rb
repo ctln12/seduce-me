@@ -22,13 +22,23 @@ class ChatsController < ApplicationController
   #   end
   # end
 
+  def create
+    @story = Story.find(params[:format])
+    @game = Game.find_by(story: @story)
+    @chat = Chat.new(game: @game)
+    @chat.save
+
+    redirect_to chat_path(id: @chat.id)
+  end
+
   def show
     @chat = Chat.includes(game: :user).find(params[:id])
     @message = Message.new
   end
 
-  private
-    # def chat_params
-    #   params.require(:chat).permit(:username, :message)
-    # end
+  # private
+
+  # def chat_params
+  #   params.require(:chat).permit(:game)
+  # end
 end
