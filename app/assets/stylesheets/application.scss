@@ -14,3 +14,27 @@
 @import "stories/index";
 @import "chats/index";
 @import "questions/index";
+
+body {
+  background-color: #D90429; // medium-candy-apple-red
+}
+
+.navbar {
+  background-color: #EDF2F4 !important; // anti-flash-white
+}
+
+.home-container {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  justify-items: center;
+}
+
+img {
+  border-radius: 50%;
+  box-shadow: 1px 3px 7px;
+  margin: 10px;
+}
