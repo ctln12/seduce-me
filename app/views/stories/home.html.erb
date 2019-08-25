@@ -13,10 +13,12 @@
     <%= image_tag("jack") %>
     <p class="name">Jack</p>
   </div>
-  <div class="mike">
-    <%= image_tag("mike") %>
-    <p class="name">Mike</p>
+  <%= link_to stories_path do %>
+    <div class="mike">
+      <%= image_tag("mike") %>
+      <p class="name">Mike</p>
   </div>
+  <% end %>
   <div class="emma">
     <%= image_tag("emma") %>
     <p class="name">Emma</p>
