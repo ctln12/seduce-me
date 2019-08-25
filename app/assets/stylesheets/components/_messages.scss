@@ -4,9 +4,8 @@
   background-color: #F4F4F4;
   padding: 20px;
   border: 1px solid #5BC4F9;
-  max-height: calc(100vh - 70px - 45px - 61px - 30px);
+  height: calc(100vh - 76px - 155px - 38px - 20px);
   overflow: scroll;
-  // border-color: #5BC4F9;
   border-radius: 4px;
 }
 
@@ -23,6 +22,7 @@
   }
 }
 .message-content {
+  // background-color: rgba(150, 4, 41, 1) !important;
   background-color: #D8D8D8;
   border-radius: 10px;
   margin: 0 10px;
@@ -61,10 +61,26 @@ input.form-control {
 }
 .chat-header {
   // background-color: #4F2F4C;
-  color: black;
+  color: #960429;
   padding: 10px 20px;
   margin-top: 10px;
   h4 {
     margin: 0;
+  }
+}
+
+.seducee-greetings {
+  display: grid;
+  grid-template-columns: 23% 77%;
+  grid-template-rows: 1fr;
+  grid-gap: 10px;
+  margin-bottom: 15px;
+  align-items: center;
+  h1 {
+    margin: 0;
+  }
+  p {
+    margin: 0;
+    font-size: 1.3em;
   }
 }
