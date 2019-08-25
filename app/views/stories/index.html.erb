@@ -1,16 +1,21 @@
-<div class="border border-primary text-primary m-2 p-2 introduction">
+<div class="introduction">
   <h1>Test your seducing skills</h1>
-  <p>Choose a story then pick the right answers to seduce and maybe meet another lonesome heart</p>
+  <ul>
+    <li>Choose a story</li>
+    <li>Three different scenarios</li>
+    <li>Two possible answers to seduce the author</li>
+    <li>Fail: choose another story to play</li>
+    <li>Success: next scenario</li>
+    <li>Win: chat with the author</li>
+    <li>Good Luck!</li>
+  </ul>
+
 </div>
 
 <% @stories.each do |story| %>
-  <div class="card card-story" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path(story.photo) %>)">
-    <h2><%= story.title %></h2>
-    <p><%= story.description %></p>
-    <a href="/stories/<%= story.id %>/games" data-method="POST">
-      <div class="play">
-        <i class="fas play-button fa-play"></i>
-      </div>
-    </a>
-  </div>
+  <%= link_to story_games_path(story), method: :post do %>
+    <div class="card card-story" style="background-image: linear-gradient(rgba(0, 0, 0,0.3), rgba(0, 0, 0,0.3)), url(<%= image_path(story.photo) %>);">
+      <h2><%= story.title %></h2>
+    </div>
+  <% end %>
 <% end %>
