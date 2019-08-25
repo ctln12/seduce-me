@@ -6,17 +6,20 @@
   grid-column-gap: 10px;
   grid-row-gap: 30px;
   justify-items: center;
+  img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+  a {
+    color: #960429;
+    text-decoration: none;
+  }
 }
 
 .home-title {
   margin: 50px 40px 0px 40px;
   text-align: center;
-}
-
-.home-container img {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
 }
 
 .name {

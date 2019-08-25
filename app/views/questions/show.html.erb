@@ -1,20 +1,15 @@
-<div class="card card-story" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path(@story.photo) %>)">
-  <h1><%= @story.title %></h1>
-  <p><%= @story.description %></p>
-  <a href="/stories/<%= @story.id %>/questions/<%= @story.questions[0].id %>"></a>
+<div class="seducee-part">
+  <h1 class="question-title"><%= @story.title %></h1>
+  <h3 class="chance-number">Situation <%= @question.number %> of <%= @story.questions.count %></h3>
+  <p class="seducee-intro">Mike just arrived in town for a conference and is waiting at the baggage pickup area for my bag but it never arrives...</p>
+  <%= image_tag("mike", class: "seducee-image") %>
+  <p class=seducee-phrase><%= @question.seducee_phrase %></p>
 </div>
-
-<div id="question">
-  <h3>Question <%= @question.number %> of <%= @story.questions.count %></h3>
-
-  <ul class="flex-container">
-    <li class="flex-item intro"><em><%= @question.seducee_introduction %></em></li>
-    <li class="flex-item bg-seducee"><%= @question.seducee_phrase %></li>
-  </ul>
-  <ul class="flex-container position-right">
-    <li class="flex-item intro text-right"><em><%= @question.seducer_introduction %></em></li>
-    <li class="flex-item bg-seducer"><%= link_to @question.seducer_answer_A, go_to_url(@question.seducer_answer_A) %></li>
-    <li class="flex-item bg-seducer"><%= link_to @question.seducer_answer_B, go_to_url(@question.seducer_answer_B) %></li>
-  </ul>
+<div class="seducer-part">
+  <p class="seducer-intro"><%= @question.seducer_introduction %></p>
+  <p class="seducer-info"><em>Choose one of the two answers</em></p>
+  <p class="seducer-answer-A"><%= link_to @question.seducer_answer_A, go_to_url(@question.seducer_answer_A) %></p>
+  <p class="seducer-answer-B"><%= link_to @question.seducer_answer_B, go_to_url(@question.seducer_answer_B) %></p>
+  <%= image_tag("alice", class: "seducer-image") %>
+</div>
   <!-- <div><%= @question.correct_answer %></div> -->
-</div>
