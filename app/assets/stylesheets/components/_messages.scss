@@ -71,7 +71,7 @@ input.form-control {
 
 .seducee-greetings {
   display: grid;
-  grid-template-columns: 23% 77%;
+  grid-template-columns: auto auto;
   grid-template-rows: 1fr;
   grid-gap: 10px;
   margin-bottom: 15px;
@@ -81,6 +81,6 @@ input.form-control {
   }
   p {
     margin: 0;
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
 }
