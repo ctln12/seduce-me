@@ -1,21 +1,23 @@
 <div class="introduction">
-  <h1>Test your seducing skills</h1>
-  <ul>
-    <li>Choose a story</li>
-    <li>Three different scenarios</li>
-    <li>Two possible answers to seduce the author</li>
-    <li>Fail: choose another story to play</li>
-    <li>Success: next scenario</li>
-    <li>Win: chat with the author</li>
-    <li>Good Luck!</li>
-  </ul>
-
+  <div class="seducee">
+    <%= image_tag("alice") %>
+    <h1>Alice</h1>
+  </div>
+  <div class="rules">
+    <p>Hello!</p>
+    <p>You have 3 chances to seduce me and each time you have to choose between 2 answers which one I prefer.<br>
+    If you succeed you'll get to chat with me!</p>
+    <p>Good Luck!</p>
+  </div>
+  <h3>Choose a story</h3>
 </div>
 
-<% @stories.each do |story| %>
-  <%= link_to story_games_path(story), method: :post do %>
-    <div class="card card-story" style="background-image: linear-gradient(rgba(0, 0, 0,0.3), rgba(0, 0, 0,0.3)), url(<%= image_path(story.photo) %>);">
-      <h2><%= story.title %></h2>
-    </div>
+
+<div class="stories-container">
+  <% @stories.each do |story| %>
+    <%= link_to story_games_path(story), method: :post, alt: "story" do %>
+      <div class="story" style="background-image: url(<%= image_path(story.photo) %>);">
+      </div>
+    <% end %>
   <% end %>
-<% end %>
+</div>
