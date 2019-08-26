@@ -1,2 +1,7 @@
-<h1><%= @user.email %></h1>
-<p>Find me in app/views/users/show.html.erb</p>
+
+<% @user.games.each do |game| %>
+  <div class="card card-story" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path(game.story.photo) %>)">
+    <h2><%= game.story.title %></h2>
+    <p><%= game.score %></p>
+  </div>
+<% end %>
