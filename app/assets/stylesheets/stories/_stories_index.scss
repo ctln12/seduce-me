@@ -1,21 +1,35 @@
-.stories-rules {
+.stories-index-title {
   padding: 20px;
 }
 
-.make-choice {
-  padding: 0 20px 10px 20px;
-}
-
 .stories-cards {
-  padding: 0 20px 0 20px;
+  padding: 15px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 47% 47%;
   grid-template-rows: 1fr 1fr;
-  grid-gap: 10px;
+  grid-gap: 20px;
+  justify-content: center;
 }
 
 .story-card {
   background-size: cover;
   background-position: center;
   height: 162px;
+  border-radius: 10px;
+  display: grid;
+}
+
+.stories-text {
+  justify-self: center;
+  align-self: end;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 10px;
+  // box-shadow: 1px 1px 5px white;
+  p {
+    text-decoration: none;
+    color: white;
+    margin: 0;
+  }
+  background-color: rgba(0, 0, 0, 0.6);
 }

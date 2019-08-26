@@ -1,15 +1,13 @@
-<div class="stories-rules">
-  <h1>Welcome!</h1>
-  <p>You have 3 chances to seduce someone and each time you have to choose between 2 answers which one I prefer.</p>
-  <p>If you succeed you'll get to chat with that person!</p>
-  <p>Good Luck!</p>
-</div>
+<h1 class="stories-index-title">Seduce...</h1>
 
-<h2 class="make-choice">Choose a story</h2>
 <div class="stories-cards">
   <% @stories.each do |story| %>
     <%= link_to story_games_path(story), method: :post, alt: "story photo" do %>
       <div class="story-card" style="background-image: url(<%= image_path(story.photo) %>)">
+      <div class="stories-text">
+        <p class=stories-authors><%= story.user.email %></p>
+        <p class="stories-title"><%= story.title %></p>
+      </div>
       </div>
     <% end %>
   <% end %>
