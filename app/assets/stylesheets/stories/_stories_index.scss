@@ -1,43 +1,21 @@
-.card-story {
+.stories-rules {
+  padding: 20px;
+}
+
+.make-choice {
+  padding: 0 20px 10px 20px;
+}
+
+.stories-cards {
+  padding: 0 20px 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.story-card {
   background-size: cover;
-  color: white;
   background-position: center;
-  margin: 0.5em;
-  padding: 0.5em;
-  height: 180px;
-  display: flex;
-  justify-content: center;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-.introduction {
-  border-radius: 5px;
-  font-size: 0.85em;
-  h1 {
-    font-size: 2em;
-  }
-}
-
-.play {
-  position: absolute;
-  display: flex;
-  bottom: 0.25em;
-  right: 1em;
-  border-radius: 5px;
-  height: 2em;
-  width: 2em;
-  margin: 1em;
-  background-color: rgba(255,255,255,0.5);
-
-
-}
-
-.play-button {
-  position: relative;
-  top: 0.5em;
-  left: 0.6em;
-  color: rgba(55,55,55,0.5);
-
+  height: 162px;
 }
