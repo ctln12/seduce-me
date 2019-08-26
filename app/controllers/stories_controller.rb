@@ -1,7 +1,14 @@
 class StoriesController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
   def index
-    @stories = Story.all
+    if user_signed_in?
+      @stories = []
+      Story.all.where.not(user: current_user).each do |story|
+        @stories << story unless story.games.where.not(user: current_user) == []
+      end
+    else
+      @stories = Story.all
+    end
   end
 
   def gameover
