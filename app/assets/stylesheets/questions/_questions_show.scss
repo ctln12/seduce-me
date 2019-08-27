@@ -1,3 +1,13 @@
+.story-card {
+  h1 {
+    margin: 0;
+  }
+  p {
+    margin: 0;
+    font-size: 1.2em;
+  }
+}
+
 #question {
   margin: 20px 10px 10px 10px;
 }
@@ -35,11 +45,15 @@
 }
 
 .bg-seducee {
-  background: #D8D8D8;
+  background: $seduce-gray;
+}
+
+.or {
+  margin: 10px 110px 10px 0;
 }
 
 .bg-seducer {
-  background: #5BC4F9;
+  background: $seduce-blue;
 }
 
 
