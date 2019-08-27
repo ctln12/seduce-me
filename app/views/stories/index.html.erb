@@ -1,15 +1,15 @@
-<div class="border border-primary text-primary m-2 p-2 introduction">
-  <h1>Test your seducing skills</h1>
-  <p>Choose a story then pick the right answers to seduce and maybe meet another lonesome heart</p>
-</div>
+<h1 class="stories-title">Qui veux-tu séduire ?</h1>
 
+<% if @stories.empty? %>
+  <p class="stories-error">Désolé, il n'y pas d'autres jeux!</p>
+<% end %>
 <% @stories.each do |story| %>
-  <div class="card card-story" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path(story.photo) %>)">
-    <h2><%= story.title %></h2>
-    <a href="/stories/<%= story.id %>/games" data-method="POST">
-      <div class="play">
-        <i class="fas play-button fa-play"></i>
+  <%= link_to story_games_path(story), method: :post do %>
+    <div class="story-card d-flex align-items-end" style="background-image: url(<%= image_path(story.photo) %>)">=
+      <div>
+        <h2><%= story.user.name %></h2>
+        <p class="story-title"><%= story.title %></p>
       </div>
-    </a>
-  </div>
+    </div>
+  <% end %>
 <% end %>
