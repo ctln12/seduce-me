@@ -1,10 +1,39 @@
 <div class="story-card d-flex align-items-end" style="background-image: url(<%= image_path(story.photo) %>)">
   <div>
     <% if defined?(score) %>
-      <img src="/assets/<%= story.user.avatar %>" class="card-trip-user avatar-bordered" />
+      <% case score %>
+      <% when 0 %>
+        <div class="heart">
+          <i class="fas fa-heart-broken"></i>
+          <i class="fas fa-heart-broken"></i>
+          <i class="fas fa-heart-broken"></i>
+        </div>
+        <h2><%= story.user.name %></h2>
+        <p class="story-title"><%= story.title %></p>
+      <% when 1 %>
+        <div class="heart">
+          <i class="fas fa-heart-broken"></i>
+          <i class="fas fa-heart-broken"></i>
+          <i class="fas fa-heart"></i>
+        </div>
+        <h2><%= story.user.name %></h2>
+        <p class="story-title"><%= story.title %></p>
+      <% when 2 %>
+        <div class="heart">
+          <i class="fas fa-heart-broken"></i>
+          <i class="fas fa-heart"></i>
+          <i class="fas fa-heart"></i>
+        </div>
+        <h2><%= story.user.name %></h2>
+        <p class="story-title"><%= story.title %></p>
+      <% when 3 %>
+        <img src="/assets/<%= story.user.avatar %>" class="card-trip-user avatar-bordered" />
+        <h2><%= story.user.name %></h2>
+        <p class="story-title"><%= story.title %></p>
+      <% end %>
+      <% else %>
+        <h2><%= story.user.name %></h2>
+        <p class="story-title"><%= story.title %></p>
     <% end %>
-    <h2><%= story.user.name %></h2>
-    <p class="story-title"><%= story.title %></p>
-
   </div>
 </div>
