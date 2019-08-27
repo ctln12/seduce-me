@@ -2,6 +2,14 @@
   <div>
     <% if defined?(score) %>
       <% case score %>
+      <% when 0 %>
+        <div class="heart">
+          <i class="fas fa-heart-broken"></i>
+          <i class="fas fa-heart-broken"></i>
+          <i class="fas fa-heart-broken"></i>
+        </div>
+        <h2><%= story.user.name %></h2>
+        <p class="story-title"><%= story.title %></p>
       <% when 1 %>
         <div class="heart">
           <i class="fas fa-heart-broken"></i>
@@ -23,6 +31,9 @@
         <h2><%= story.user.name %></h2>
         <p class="story-title"><%= story.title %></p>
       <% end %>
+      <% else %>
+        <h2><%= story.user.name %></h2>
+        <p class="story-title"><%= story.title %></p>
     <% end %>
   </div>
 </div>
