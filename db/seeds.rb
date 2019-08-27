@@ -17,10 +17,10 @@ matt = User.create!(name: "Matt",email: "matt@gmail.com", password: "123456")
 elsa = User.create!(name: "Elsa",email: "elsa@gmail.com", password: "123456")
 
 puts 'Creating stories...'
-airport = Story.create!(title: "At the airport", description: "I just arrived in town for a conference and I'm waiting at the baggage pickup area for my bag to arrive hoping that this trip will be a memorable one...", photo: "airport.jpg", user_id: alice.id)
-beach = Story.create!(title: "At the beach", description: "On holiday in Cancun I just had a swim and I'm walking back to where I left my towel when I notice someone else lying on it...", photo: "beach.jpg", user_id: sarah.id)
-post_office = Story.create!(title: "At the post office", description: "After an endless wait my turn finally arrives. I walk up to the desk and hand over the paper to get my mail but as I walk away...", photo: "post_office.jpg", user_id: jack.id)
-laundromat = Story.create!(title: "At the laundromat", description: "After an endless wait my turn finally arrives. I walk up to the laundry machine when someone rushes before me...", photo: "laundromat.jpg", user_id: mike.id)
+airport = Story.create!(title: "At the airport", description: "I just arrived in town for a conference and I'm waiting at the baggage pickup area for my bag to arrive hoping that this trip will be a memorable one...", photo: "airport.jpg", greetings: "Well done! Tell me a little bit about you!", user_id: alice.id)
+beach = Story.create!(title: "At the beach", description: "On holiday in Cancun I just had a swim and I'm walking back to where I left my towel when I notice someone else lying on it...", photo: "beach.jpg", greetings: "Well done! Tell me a little bit about you!", user_id: sarah.id)
+post_office = Story.create!(title: "At the post office", description: "After an endless wait my turn finally arrives. I walk up to the desk and hand over the paper to get my mail but as I walk away...", photo: "post_office.jpg", greetings: "Well done! Tell me a little bit about you!", user_id: jack.id)
+laundromat = Story.create!(title: "At the laundromat", description: "After an endless wait my turn finally arrives. I walk up to the laundry machine when someone rushes before me...", photo: "laundromat.jpg", greetings: "Well done! Tell me a little bit about you!", user_id: mike.id)
 
 puts 'Creating questions...'
 
