@@ -1,9 +1,8 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-6 col-sm-offset-3">
-      <div class="chat-header">
-        <%= render "stories/story_card", story: @chat.game.story, score: @chat.game.score %>
-      </div>
+      <br>
+      <%= render "stories/story_card", story: @chat.game.story, score: @chat.game.score %>
       <div class="messages">
         <%= render "messages/message", message: @chat.game.story.greetings, user_is_messages_author: current_user != @chat.game.user %>
         <% @chat.messages.each do |message|  %>
