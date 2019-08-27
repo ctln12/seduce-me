@@ -1,6 +1,5 @@
 <div class="card card-story" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path(@story.photo) %>)">
   <h1><%= @story.title %></h1>
-  <p><%= @story.description %></p>
   <a href="/stories/<%= @story.id %>/questions/<%= @story.questions[0].id %>"></a>
 </div>
 
