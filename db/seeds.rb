@@ -50,17 +50,29 @@ Question.create!(number: 3, seducee_introduction: "You are having a drink and ev
 
 puts 'Creating Games'
 
-Game.create!(user_id: emma.id, story_id: airport.id, score: 3)
-Game.create!(user_id: tom.id, story_id: beach.id, score: 3)
-Game.create!(user_id: matt.id, story_id: laundromat.id, score: 3)
-Game.create!(user_id: emma.id, story_id: post_office.id, score: 2)
-Game.create!(user_id: tom.id, story_id: airport.id, score: 2)
-Game.create!(user_id: matt.id, story_id: beach.id, score: 2)
-Game.create!(user_id: jack.id, story_id: laundromat.id, score: 1)
-Game.create!(user_id: tom.id, story_id: post_office.id, score: 1)
-Game.create!(user_id: emma.id, story_id: airport.id, score: 1)
-Game.create!(user_id: matt.id, story_id: beach.id, score: 3)
-Game.create!(user_id: elsa.id, story_id: laundromat.id, score: 3)
-Game.create!(user_id: alice.id, story_id: post_office.id, score: 3)
+game1 = Game.create!(user_id: emma.id, story_id: airport.id, score: 3)
+game2 = Game.create!(user_id: tom.id, story_id: beach.id, score: 3)
+game3 = Game.create!(user_id: matt.id, story_id: laundromat.id, score: 3)
+game4 = Game.create!(user_id: emma.id, story_id: post_office.id, score: 2)
+game5 = Game.create!(user_id: tom.id, story_id: airport.id, score: 2)
+game6 = Game.create!(user_id: matt.id, story_id: beach.id, score: 2)
+game7 = Game.create!(user_id: jack.id, story_id: laundromat.id, score: 1)
+game8 = Game.create!(user_id: tom.id, story_id: post_office.id, score: 1)
+game9 = Game.create!(user_id: emma.id, story_id: airport.id, score: 1)
+game10 = Game.create!(user_id: matt.id, story_id: beach.id, score: 3)
+game11 = Game.create!(user_id: elsa.id, story_id: laundromat.id, score: 3)
+game12 = Game.create!(user_id: alice.id, story_id: post_office.id, score: 3)
+
+puts 'Creating Chats'
+
+Chat.create!(game_id: game1.id)
+Chat.create!(game_id: game2.id)
+Chat.create!(game_id: game3.id)
+Chat.create!(game_id: game10.id)
+Chat.create!(game_id: game11.id)
+Chat.create!(game_id: game12.id)
+
+
+
 
 puts 'Seed finished!'
