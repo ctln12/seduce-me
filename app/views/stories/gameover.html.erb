@@ -1,7 +1,7 @@
-<div class="photo" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path(Story.find(params[:id]).photo) %>);">
-<div class="centered">
-  <h1 class="title">Game Over</h1>
-  <h4 class="message-game-end">Your score: <%= @game.score %> / <%= @questions.count %></h4>
-  <h4 class="button"><%= link_to "New Game", "/stories" %></h4>
-</div>
+<div class="photo" style="background-image: url(<%= image_path(Story.find(params[:id]).photo) %>);">
+  <div class="centered">
+    <h1 class="title">Game Over</h1>
+    <h4 class="message-game-end">Your score: <%= @game.score %> / <%= @questions.count %></h4>
+    <h4 class="button"><%= link_to "New Game", "/stories" %></h4>
+  </div>
 </div>
