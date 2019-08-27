@@ -5,6 +5,7 @@ Game.destroy_all
 Question.destroy_all
 Story.destroy_all
 User.destroy_all
+Game.destroy_all
 
 puts 'Creating users...'
 alice = User.create!(name: "Alice",email: "alice@gmail.com", password: "123456", avatar: "alice.jpg")
@@ -46,5 +47,21 @@ puts '... of story 4'
 Question.create!(number: 1, seducee_introduction: "Mike, a handsome businessman awaits his baggage to arrive, but it never arrives", seducee_phrase: "I just can't believe it! They lost my baggage!", seducer_introduction: "You hear him and turn around. What do you say?", seducer_answer_A: "What is a handsome guy like you doing in a place like this?", seducer_answer_B: "Can I help you find your baggage? I work here.", correct_answer: "A", story_id: laundromat.id)
 Question.create!(number: 2, seducee_introduction: "You find yourselves in a lonely corner of the airport", seducee_phrase: "What will I do now? They keys for my flat are inside my baggage!", seducer_introduction: "You start saying, 'I think I can help you with that...'", seducer_answer_A: "Let me get a phone so you can call your mom!", seducer_answer_B: "Let's have a drink and you can figure it out later...", correct_answer: "A", story_id: laundromat.id)
 Question.create!(number: 3, seducee_introduction: "You are having a drink and everthing is going great when all of a sudden a sexy flight attendant starts to flirt with your Mike...", seducee_phrase: "Nice to meet you", seducer_introduction: "What do you say?", seducer_answer_A: "Sorry but we are trying to have a private conversation here!", seducer_answer_B: "Nice to meet you too. Why don't you join us?", correct_answer: "B", story_id: laundromat.id)
+
+
+puts 'Creating Games'
+
+Game.create!(user_id: emma.id, story_id: airport.id, score: 3)
+Game.create!(user_id: tom.id, story_id: beach.id, score: 3)
+Game.create!(user_id: matt.id, story_id: laundromat.id, score: 3)
+Game.create!(user_id: emma.id, story_id: post_office.id, score: 2)
+Game.create!(user_id: tom.id, story_id: airport.id, score: 2)
+Game.create!(user_id: matt.id, story_id: beach.id, score: 2)
+Game.create!(user_id: jack.id, story_id: laundromat.id, score: 1)
+Game.create!(user_id: tom.id, story_id: post_office.id, score: 1)
+Game.create!(user_id: emma.id, story_id: airport.id, score: 1)
+Game.create!(user_id: matt.id, story_id: beach.id, score: 3)
+Game.create!(user_id: elsa.id, story_id: laundromat.id, score: 3)
+Game.create!(user_id: alice.id, story_id: post_office.id, score: 3)
 
 puts 'Seed finished!'
