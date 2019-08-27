@@ -18,10 +18,10 @@ elsa = User.create!(name: "Elsa",email: "elsa@gmail.com", password: "123456", av
 
 puts 'Creating stories...'
 
-airport = Story.create!(title: "At the airport", photo: "airport.jpg", user_id: alice.id)
-beach = Story.create!(title: "At the beach", photo: "beach.jpg", user_id: sarah.id)
-post_office = Story.create!(title: "At the post office", photo: "post_office.jpg", user_id: jack.id)
-laundromat = Story.create!(title: "At the laundromat", photo: "laundromat.jpg", user_id: mike.id)
+airport = Story.create!(title: "At the airport", photo: "airport.jpg", user_id: alice.id, greetings: "Way to go, you've made it this far.  Now it's time for the real fun to start!")
+beach = Story.create!(title: "At the beach", photo: "beach.jpg", user_id: sarah.id, greetings: "Way to go, you've made it this far.  Now it's time for the real fun to start!")
+post_office = Story.create!(title: "At the post office", photo: "post_office.jpg", user_id: jack.id, greetings: "Way to go, you've made it this far.  Now it's time for the real fun to start!")
+laundromat = Story.create!(title: "At the laundromat", photo: "laundromat.jpg", user_id: mike.id, greetings: "Way to go, you've made it this far.  Now it's time for the real fun to start!")
 
 puts 'Creating questions...'
 

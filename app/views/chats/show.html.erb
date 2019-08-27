@@ -5,8 +5,9 @@
         <h4><%= @chat.game.story.title  %> </h4>
       </div>
       <div class="messages">
+        <%= render "messages/message", message: @chat.game.story.greetings, user_is_messages_author: current_user != @chat.game.user %>
         <% @chat.messages.each do |message|  %>
-          <%= render "messages/message", message: message, user_is_messages_author: current_user == @chat.game.user ? message.seducer : !message.seducer %>
+          <%= render "messages/message", message: message.content, user_is_messages_author: current_user == @chat.game.user ? message.seducer : !message.seducer %>
         <% end %>
       </div>
       <div id="create-message">
