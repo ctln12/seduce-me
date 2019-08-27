@@ -1,10 +1,11 @@
-<h1 class="stories-title">Qui veux-tu séduire ?</h1>
-
-<% if @stories.empty? %>
-  <p class="stories-error">Désolé, il n'y pas d'autres jeux!</p>
-<% end %>
-<% @stories.each do |story| %>
-  <%= link_to story_games_path(story), method: :post do %>
-    <%= render "story_card", story: story %>
+<div class="main-container">
+  <h1 class="stories-title">Qui veux-tu séduire ?</h1>
+  <% if @stories.empty? %>
+    <p class="stories-error">Désolé, il n'y pas d'autres jeux!</p>
   <% end %>
-<% end %>
+  <% @stories.each do |story| %>
+    <%= link_to story_games_path(story), method: :post do %>
+      <%= render "story_card", story: story %>
+    <% end %>
+  <% end %>
+</div>
