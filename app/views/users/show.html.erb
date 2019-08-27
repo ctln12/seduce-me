@@ -1,9 +1,11 @@
 
 <% @user.games.each do |game| %>
   <%= link_to (game.chat ? chat_path(game.chat) : "#") do %>
-    <div class="card card-story" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path(game.story.photo) %>)">
+    <%= render "stories/story_card", story: game.story, score: game.score %>
+
+    <!-- <div class="card card-story" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path(game.story.photo) %>)">
       <h2><%= game.story.title %></h2>
       <p><%= game.score %> / 3</p>
-    </div>
+    </div> -->
   <% end %>
 <% end %>
