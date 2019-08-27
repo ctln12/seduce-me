@@ -7,16 +7,17 @@ Story.destroy_all
 User.destroy_all
 
 puts 'Creating users...'
-alice = User.create!(name: "Alice",email: "alice@gmail.com", password: "123456")
-sarah = User.create!(name: "Sarah",email: "sarah@gmail.com", password: "123456")
-jack = User.create!(name: "Jack",email: "jack@gmail.com", password: "123456")
-mike = User.create!(name: "Mike",email: "mike@gmail.com", password: "123456")
-emma = User.create!(name: "Emma",email: "emma@gmail.com", password: "123456")
-tom = User.create!(name: "Tom",email: "tom@gmail.com", password: "123456")
-matt = User.create!(name: "Matt",email: "matt@gmail.com", password: "123456")
-elsa = User.create!(name: "Elsa",email: "elsa@gmail.com", password: "123456")
+alice = User.create!(name: "Alice",email: "alice@gmail.com", password: "123456", avatar: "alice.jpg")
+sarah = User.create!(name: "Sarah",email: "sarah@gmail.com", password: "123456", avatar: "sarah.jpg")
+jack = User.create!(name: "Jack",email: "jack@gmail.com", password: "123456", avatar: "jack.jpg")
+mike = User.create!(name: "Mike",email: "mike@gmail.com", password: "123456", avatar: "mike.jpg")
+emma = User.create!(name: "Emma",email: "emma@gmail.com", password: "123456", avatar: "emma.jpg")
+tom = User.create!(name: "Tom",email: "tom@gmail.com", password: "123456", avatar: "tom.jpg")
+matt = User.create!(name: "Matt",email: "matt@gmail.com", password: "123456", avatar: "matt.jpg")
+elsa = User.create!(name: "Elsa",email: "elsa@gmail.com", password: "123456", avatar: "elsa.jpg")
 
 puts 'Creating stories...'
+
 airport = Story.create!(title: "At the airport", photo: "airport.jpg", user_id: alice.id)
 beach = Story.create!(title: "At the beach", photo: "beach.jpg", user_id: sarah.id)
 post_office = Story.create!(title: "At the post office", photo: "post_office.jpg", user_id: jack.id)
