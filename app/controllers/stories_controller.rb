@@ -4,7 +4,7 @@ class StoriesController < ApplicationController
     if user_signed_in?
       @stories = []
       Story.all.where.not(user: current_user).each do |story|
-        @stories << story unless story.games.where.not(user: current_user) == []
+        @stories << story if story.games.where(user: current_user).empty?
       end
     else
       @stories = Story.all
