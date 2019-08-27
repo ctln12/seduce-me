@@ -1,4 +1,4 @@
-
+<h1>Games played</h1>
 <% @user.games.each do |game| %>
   <%= link_to (game.chat ? chat_path(game.chat) : "#") do %>
     <%= render "stories/story_card", story: game.story, score: game.score %>
