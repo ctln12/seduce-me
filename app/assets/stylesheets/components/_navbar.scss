@@ -1,16 +1,31 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background-size: cover;
-  background-position: bottom;
+  // background-size: cover;
+  // background-position: bottom;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
+// .navbar-lewagon .navbar-collapse {
+//   flex-grow: 0;
+// }
 
 .navbar-lewagon .navbar-brand img {
-  width: 50px;
+  width: 75px;
   border-radius: 50%;
-  padding: 0.1em;
+  // padding: 0.1em;
   // box-shadow: 0 0 10px 10px rgba(255,255,255,0.1)
+}
+
+// #navbarDropdown {
+//   position: fixed;
+//   right: 16px;
+//   top: 10px;
+// }
+
+.navbar {
+  background-color: $seduce-red;
+  margin-top: 0;
+}
+
+.dropdown-menu {
+  background-color: $seduce-red;
 }
