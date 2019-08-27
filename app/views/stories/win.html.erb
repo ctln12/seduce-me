@@ -1,7 +1,7 @@
 <div class="photo" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path(Story.find(params[:id]).photo) %>);">
-<div class="centered">
-  <h1 class="title">Congratulations!</h1>
-  <h3 class="message"> You seduced <%= @story.user.email %>!</h3>
-  <h4 class="button win"><%= link_to "Send a message", chats_path(@story, @game), method: :post %></h4>
-</div>
+  <div class="centered">
+    <h1 class="title">Congratulations!</h1>
+    <h3 class="message-game-end"> You seduced<br><%= @story.user.name %>!</h3>
+    <h4 class="button win"><%= link_to "Send a message", chats_path(@story, @game), method: :post %></h4>
+  </div>
 </div>
