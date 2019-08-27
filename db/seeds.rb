@@ -5,7 +5,6 @@ Game.destroy_all
 Question.destroy_all
 Story.destroy_all
 User.destroy_all
-Game.destroy_all
 
 puts 'Creating users...'
 alice = User.create!(name: "Alice",email: "alice@gmail.com", password: "123456", avatar: "alice.jpg")
