@@ -1,22 +1,24 @@
-<div class="story-card d-flex align-items-end" style="background-image: url(<%= image_path(@story.photo) %>)">
-  <div>
-    <h1><%= @story.user.name %></h1>
-    <p><%= @story.title %></p>
+<div class="main-container">
+  <div class="story-card d-flex align-items-end" style="background-image: url(<%= image_path(@story.photo) %>)">
+    <div>
+      <h1><%= @story.user.name %></h1>
+      <p><%= @story.title %></p>
+    </div>
   </div>
-</div>
 
-<div id="question">
-  <h3>Question <%= @question.number %> of <%= @story.questions.count %></h3>
+  <div id="question">
+    <h3>Question <%= @question.number %> of <%= @story.questions.count %></h3>
 
-  <ul class="flex-container">
-    <li class="flex-item intro"><em><%= @question.seducee_introduction %></em></li>
-    <li class="flex-item bg-seducee"><%= @question.seducee_phrase %></li>
-  </ul>
-  <ul class="flex-container position-right">
-    <li class="flex-item intro text-right"><em><%= @question.seducer_introduction %></em></li>
-    <li class="flex-item bg-seducer"><%= link_to @question.seducer_answer_A, go_to_url(@question.seducer_answer_A) %></li>
-    <p class="or">or</p>
-    <li class="flex-item bg-seducer"><%= link_to @question.seducer_answer_B, go_to_url(@question.seducer_answer_B) %></li>
-  </ul>
-  <!-- <div><%= @question.correct_answer %></div> -->
+    <ul class="flex-container">
+      <li class="flex-item intro"><em><%= @question.seducee_introduction %></em></li>
+      <li class="flex-item bg-seducee"><%= @question.seducee_phrase %></li>
+    </ul>
+    <ul class="flex-container position-right">
+      <li class="flex-item intro text-right"><em><%= @question.seducer_introduction %></em></li>
+      <li class="flex-item bg-seducer"><%= link_to @question.seducer_answer_A, go_to_url(@question.seducer_answer_A) %></li>
+      <p class="or">or</p>
+      <li class="flex-item bg-seducer"><%= link_to @question.seducer_answer_B, go_to_url(@question.seducer_answer_B) %></li>
+    </ul>
+    <!-- <div><%= @question.correct_answer %></div> -->
+  </div>
 </div>
