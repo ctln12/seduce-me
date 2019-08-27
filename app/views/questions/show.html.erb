@@ -1,6 +1,8 @@
-<div class="card card-story" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path(@story.photo) %>)">
-  <h1><%= @story.title %></h1>
-  <a href="/stories/<%= @story.id %>/questions/<%= @story.questions[0].id %>"></a>
+<div class="story-card d-flex align-items-end" style="background-image: url(<%= image_path(@story.photo) %>)">
+  <div>
+    <h1><%= @story.user.name %></h1>
+    <p><%= @story.title %></p>
+  </div>
 </div>
 
 <div id="question">
@@ -13,6 +15,7 @@
   <ul class="flex-container position-right">
     <li class="flex-item intro text-right"><em><%= @question.seducer_introduction %></em></li>
     <li class="flex-item bg-seducer"><%= link_to @question.seducer_answer_A, go_to_url(@question.seducer_answer_A) %></li>
+    <p class="or">or</p>
     <li class="flex-item bg-seducer"><%= link_to @question.seducer_answer_B, go_to_url(@question.seducer_answer_B) %></li>
   </ul>
   <!-- <div><%= @question.correct_answer %></div> -->
