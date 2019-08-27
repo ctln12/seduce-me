@@ -1,0 +1,10 @@
+<div class="story-card d-flex align-items-end" style="background-image: url(<%= image_path(story.photo) %>)">
+  <div>
+    <% if defined?(score) %>
+      <img src="/assets/<%= story.user.avatar %>" class="card-trip-user avatar-bordered" />
+    <% end %>
+    <h2><%= story.user.name %></h2>
+    <p class="story-title"><%= story.title %></p>
+
+  </div>
+</div>
