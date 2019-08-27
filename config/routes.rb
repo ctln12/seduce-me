@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  get 'users/show'
   devise_for :users
+  resources :users, only: :show
   root to: 'stories#index'
+
   resources :stories, only: [:index] do
     resources :questions, only: [:show]
     resources :games, only: :create
