@@ -5,11 +5,6 @@
 <% end %>
 <% @stories.each do |story| %>
   <%= link_to story_games_path(story), method: :post do %>
-    <div class="story-card d-flex align-items-end" style="background-image: url(<%= image_path(story.photo) %>)">
-      <div>
-        <h2><%= story.user.name %></h2>
-        <p class="story-title"><%= story.title %></p>
-      </div>
-    </div>
+    <%= render "story_card", story: story %>
   <% end %>
 <% end %>
