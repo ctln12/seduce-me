@@ -18,61 +18,136 @@ elsa = User.create!(name: "Elsa",email: "elsa@gmail.com", password: "123456", av
 
 puts 'Creating stories...'
 
-airport = Story.create!(title: "At the airport", photo: "airport.jpg", user_id: alice.id, greetings: "Way to go, you've made it this far.  Now it's time for the real fun to start!")
-beach = Story.create!(title: "At the beach", photo: "beach.jpg", user_id: sarah.id, greetings: "Way to go, you've made it this far.  Now it's time for the real fun to start!")
-post_office = Story.create!(title: "At the post office", photo: "post_office.jpg", user_id: jack.id, greetings: "Way to go, you've made it this far.  Now it's time for the real fun to start!")
-laundromat = Story.create!(title: "At the laundromat", photo: "laundromat.jpg", user_id: mike.id, greetings: "Way to go, you've made it this far.  Now it's time for the real fun to start!")
+airport = Story.create!(title: "A l'aéroport", photo: "airport.jpg", user_id: alice.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
+beach = Story.create!(title: "A la plage", photo: "beach.jpg", user_id: sarah.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
+post_office = Story.create!(title: "A la poste", photo: "post_office.jpg", user_id: jack.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
+laundromat = Story.create!(title: "A la laverie", photo: "laundromat.jpg", user_id: mike.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
 
 puts 'Creating questions...'
 
 puts '... of story 1'
-Question.create!(number: 1, seducee_introduction: "Alice, a lovely businesswoman awaits his baggage to arrive, but it never arrives...", seducee_phrase: "I just can't believe it! They lost my baggage!", seducer_introduction: "You hear her and turn around. What do you say?", seducer_answer_A: "What is a beautiful lady like you doing in a place like this?", seducer_answer_B: "Can I help you find your baggage? I work here.", correct_answer: "B", story_id: airport.id)
-Question.create!(number: 2, seducee_introduction: "You find yourselves in a lonely corner of the airport", seducee_phrase: "What will I do now? They keys for my flat are inside my baggage!", seducer_introduction: "You start saying, 'I think I can help you with that...'", seducer_answer_A: "Let me get a phone so you can call your mom!", seducer_answer_B: "Let's have a drink and you can figure it out later...", correct_answer: "B", story_id: airport.id)
-Question.create!(number: 3, seducee_introduction: "You are having a drink and everthing is going great when all of a sudden a sexy flight attendant starts to flirt with your Alice...", seducee_phrase: "Nice to meet you", seducer_introduction: "What do you say?", seducer_answer_A: "Sorry but we are trying to have a private conversation here!", seducer_answer_B: "Nice to meet you too. Why don't you join us?", correct_answer: "A", story_id: airport.id)
+Question.create!(number: 1,
+  seducee_introduction: "Alice, une jeune femme d'affaire attend sa valise mais elle n'arrive pas...",
+  seducee_phrase: "Ce n'est pas possible! Ils ont égaré mon bagage!",
+  seducer_introduction: "Tu l'entends et te tournes vers elle. Que dis-tu ?",
+  seducer_answer_A: "Que fait une belle jeune femme comme vous dans un endroit pareil ?",
+  seducer_answer_B: "Puis-je vous aider ? Je travaille ici.",
+  correct_answer: "B",
+  story_id: airport.id)
+Question.create!(number: 2, seducee_introduction: "Vous vous retrouvez dans un coin tranquille de l'aéroport.",
+  seducee_phrase: "Que vais-je faire maintenant? Les clés de mon appartement sont dans ma valise !",
+  seducer_introduction: "Chevalresque, tu veux l'aider. Que proposes-tu ?",
+  seducer_answer_A: "Je vous prête mon téléphone pour appeler vos parents !",
+  seducer_answer_B: "Allons prendre un verre et vous vous en occuperez plus tard !",
+  correct_answer: "B",
+  story_id: airport.id)
+Question.create!(number: 3,
+  seducee_introduction: "Vous prenez un verre et tout se passe bien jusqu'à ce que son ex débarque et flirte avec elle. Alice te glisse discrètement..",
+  seducee_phrase: "Désolée, il n'a pas l'air de vouloir partir...",
+  seducer_introduction: "Sa présence vous dérange. Que dis-tu?",
+  seducer_answer_A: "Excusez-moi mais on essaie d'avoir une conversation privée ici!",
+  seducer_answer_B: "Voulez-vous vous joindre à nous ?",
+  correct_answer: "A",
+  story_id: airport.id)
 
 puts '... of story 2'
-Question.create!(number: 1, seducee_introduction: "Sarah, a lovely businesswoman awaits his baggage to arrive, but it never arrives", seducee_phrase: "I just can't believe it! They lost my baggage!", seducer_introduction: "You hear her and turn around. What do you say?", seducer_answer_A: "What is a handsome guy like you doing in a place like this?", seducer_answer_B: "Can I help you find your baggage? I work here.", correct_answer: "A", story_id: beach.id)
-Question.create!(number: 2, seducee_introduction: "You find yourselves in a lonely corner of the airport", seducee_phrase: "What will I do now? They keys for my flat are inside my baggage!", seducer_introduction: "You start saying, 'I think I can help you with that...'", seducer_answer_A: "Let me get a phone so you can call your mom!", seducer_answer_B: "Let's have a drink and you can figure it out later...", correct_answer: "B", story_id: beach.id)
-Question.create!(number: 3, seducee_introduction: "You are having a drink and everthing is going great when all of a sudden a sexy flight attendant starts to flirt with your Sarah...", seducee_phrase: "Nice to meet you", seducer_introduction: "What do you say?", seducer_answer_A: "Sorry but we are trying to have a private conversation here!", seducer_answer_B: "Nice to meet you too. Why don't you join us?", correct_answer: "A", story_id: beach.id)
+Question.create!(number: 1,
+  seducee_introduction: "Alice, une jeune femme d'affaire attend sa valise mais elle n'arrive pas...",
+  seducee_phrase: "Ce n'est pas possible! Ils ont égaré mon bagage!",
+  seducer_introduction: "Tu l'entends et te tournes vers elle. Que dis-tu ?",
+  seducer_answer_A: "Que fait une belle jeune femme comme vous dans un endroit pareil ?",
+  seducer_answer_B: "Puis-je vous aider ? Je travaille ici.",
+  correct_answer: "B",
+  story_id: beach.id)
+Question.create!(number: 2, seducee_introduction: "Vous vous retrouvez dans un coin tranquille de l'aéroport.",
+  seducee_phrase: "Que vais-je faire maintenant? Les clés de mon appartement sont dans ma valise !",
+  seducer_introduction: "Chevalresque, tu veux l'aider. Que proposes-tu ?",
+  seducer_answer_A: "Je vous prête mon téléphone pour appeler vos parents !",
+  seducer_answer_B: "Allons prendre un verre et vous vous en occuperez plus tard !",
+  correct_answer: "A",
+  story_id: beach.id)
+Question.create!(number: 3,
+  seducee_introduction: "Vous prenez un verre et tout se passe bien jusqu'à ce que son ex débarque et flirte avec elle. Alice te glisse discrètement..",
+  seducee_phrase: "Désolée, il n'a pas l'air de vouloir partir...",
+  seducer_introduction: "Sa présence vous dérange. Que dis-tu?",
+  seducer_answer_A: "Excusez-moi mais on essaie d'avoir une conversation privée ici!",
+  seducer_answer_B: "Voulez-vous vous joindre à nous ?",
+  correct_answer: "B",
+  story_id: beach.id)
 
 puts '... of story 3'
-Question.create!(number: 1, seducee_introduction: "Jack, a handsome businessman awaits his baggage to arrive, but it never arrives", seducee_phrase: "I just can't believe it! They lost my baggage!", seducer_introduction: "You hear him and turn around. What do you say?", seducer_answer_A: "What is a handsome guy like you doing in a place like this?", seducer_answer_B: "Can I help you find your baggage? I work here.", correct_answer: "B", story_id: post_office.id)
-Question.create!(number: 2, seducee_introduction: "You find yourselves in a lonely corner of the airport", seducee_phrase: "What will I do now? They keys for my flat are inside my baggage!", seducer_introduction: "You start saying, 'I think I can help you with that...'", seducer_answer_A: "Let me get a phone so you can call your mom!", seducer_answer_B: "Let's have a drink and you can figure it out later...", correct_answer: "A", story_id: post_office.id)
-Question.create!(number: 3, seducee_introduction: "You are having a drink and everthing is going great when all of a sudden a sexy flight attendant starts to flirt with your Jack...", seducee_phrase: "Nice to meet you", seducer_introduction: "What do you say?", seducer_answer_A: "Sorry but we are trying to have a private conversation here!", seducer_answer_B: "Nice to meet you too. Why don't you join us?", correct_answer: "B", story_id: post_office.id)
+Question.create!(number: 1,
+  seducee_introduction: "Alice, une jeune femme d'affaire attend sa valise mais elle n'arrive pas...",
+  seducee_phrase: "Ce n'est pas possible! Ils ont égaré mon bagage!",
+  seducer_introduction: "Tu l'entends et te tournes vers elle. Que dis-tu ?",
+  seducer_answer_A: "Que fait une belle jeune femme comme vous dans un endroit pareil ?",
+  seducer_answer_B: "Puis-je vous aider ? Je travaille ici.",
+  correct_answer: "B",
+  story_id: post_office.id)
+Question.create!(number: 2, seducee_introduction: "Vous vous retrouvez dans un coin tranquille de l'aéroport.",
+  seducee_phrase: "Que vais-je faire maintenant? Les clés de mon appartement sont dans ma valise !",
+  seducer_introduction: "Chevalresque, tu veux l'aider. Que proposes-tu ?",
+  seducer_answer_A: "Je vous prête mon téléphone pour appeler vos parents !",
+  seducer_answer_B: "Allons prendre un verre et vous vous en occuperez plus tard !",
+  correct_answer: "A",
+  story_id: post_office.id)
+Question.create!(number: 3,
+  seducee_introduction: "Vous prenez un verre et tout se passe bien jusqu'à ce que son ex débarque et flirte avec elle. Alice te glisse discrètement..",
+  seducee_phrase: "Désolée, il n'a pas l'air de vouloir partir...",
+  seducer_introduction: "Sa présence vous dérange. Que dis-tu?",
+  seducer_answer_A: "Excusez-moi mais on essaie d'avoir une conversation privée ici!",
+  seducer_answer_B: "Voulez-vous vous joindre à nous ?",
+  correct_answer: "B",
+  story_id: post_office.id)
 
 
 puts '... of story 4'
 
-Question.create!(number: 1, seducee_introduction: "Mike, a handsome businessman awaits his baggage to arrive, but it never arrives", seducee_phrase: "I just can't believe it! They lost my baggage!", seducer_introduction: "You hear him and turn around. What do you say?", seducer_answer_A: "What is a handsome guy like you doing in a place like this?", seducer_answer_B: "Can I help you find your baggage? I work here.", correct_answer: "A", story_id: laundromat.id)
-Question.create!(number: 2, seducee_introduction: "You find yourselves in a lonely corner of the airport", seducee_phrase: "What will I do now? They keys for my flat are inside my baggage!", seducer_introduction: "You start saying, 'I think I can help you with that...'", seducer_answer_A: "Let me get a phone so you can call your mom!", seducer_answer_B: "Let's have a drink and you can figure it out later...", correct_answer: "A", story_id: laundromat.id)
-Question.create!(number: 3, seducee_introduction: "You are having a drink and everthing is going great when all of a sudden a sexy flight attendant starts to flirt with your Mike...", seducee_phrase: "Nice to meet you", seducer_introduction: "What do you say?", seducer_answer_A: "Sorry but we are trying to have a private conversation here!", seducer_answer_B: "Nice to meet you too. Why don't you join us?", correct_answer: "B", story_id: laundromat.id)
+Question.create!(number: 1,
+  seducee_introduction: "Alice, une jeune femme d'affaire attend sa valise mais elle n'arrive pas...",
+  seducee_phrase: "Ce n'est pas possible! Ils ont égaré mon bagage!",
+  seducer_introduction: "Tu l'entends et te tournes vers elle. Que dis-tu ?",
+  seducer_answer_A: "Que fait une belle jeune femme comme vous dans un endroit pareil ?",
+  seducer_answer_B: "Puis-je vous aider ? Je travaille ici.",
+  correct_answer: "B",
+  story_id: laundromat.id)
+Question.create!(number: 2, seducee_introduction: "Vous vous retrouvez dans un coin tranquille de l'aéroport.",
+  seducee_phrase: "Que vais-je faire maintenant? Les clés de mon appartement sont dans ma valise !",
+  seducer_introduction: "Chevalresque, tu veux l'aider. Que proposes-tu ?",
+  seducer_answer_A: "Je vous prête mon téléphone pour appeler vos parents !",
+  seducer_answer_B: "Allons prendre un verre et vous vous en occuperez plus tard !",
+  correct_answer: "B",
+  story_id: laundromat.id)
+Question.create!(number: 3,
+  seducee_introduction: "Vous prenez un verre et tout se passe bien jusqu'à ce que son ex débarque et flirte avec elle. Alice te glisse discrètement..",
+  seducee_phrase: "Désolée, il n'a pas l'air de vouloir partir...",
+  seducer_introduction: "Sa présence vous dérange. Que dis-tu?",
+  seducer_answer_A: "Excusez-moi mais on essaie d'avoir une conversation privée ici!",
+  seducer_answer_B: "Voulez-vous vous joindre à nous ?",
+  correct_answer: "A",
+  story_id: laundromat.id)
 
 
 puts 'Creating Games'
 
-game1 = Game.create!(user_id: emma.id, story_id: airport.id, score: 3)
-game2 = Game.create!(user_id: tom.id, story_id: beach.id, score: 3)
-game3 = Game.create!(user_id: matt.id, story_id: laundromat.id, score: 3)
-game4 = Game.create!(user_id: emma.id, story_id: post_office.id, score: 2)
-game5 = Game.create!(user_id: tom.id, story_id: airport.id, score: 2)
-game6 = Game.create!(user_id: matt.id, story_id: beach.id, score: 2)
-game7 = Game.create!(user_id: jack.id, story_id: laundromat.id, score: 1)
-game8 = Game.create!(user_id: tom.id, story_id: post_office.id, score: 1)
-game9 = Game.create!(user_id: emma.id, story_id: airport.id, score: 1)
-game10 = Game.create!(user_id: matt.id, story_id: beach.id, score: 3)
+game1 = Game.create!(user_id: alice.id, story_id: laundromat.id, score: 3)
+game2 = Game.create!(user_id: sarah.id, story_id: laundromat.id, score: 1)
+game3 = Game.create!(user_id: sarah.id, story_id: laundromat.id, score: 3)
+game4 = Game.create!(user_id: emma.id, story_id: airport.id, score: 2)
+game5 = Game.create!(user_id: emma.id, story_id: post_office.id, score: 2)
+game6 = Game.create!(user_id: tom.id, story_id: beach.id, score: 3)
+game7 = Game.create!(user_id: matt.id, story_id: laundromat.id, score: 1)
+game8 = Game.create!(user_id: matt.id, story_id: laundromat.id, score: 3)
+game9 = Game.create!(user_id: elsa.id, story_id: laundromat.id, score: 1)
+game10 = Game.create!(user_id: elsa.id, story_id: laundromat.id, score: 2)
 game11 = Game.create!(user_id: elsa.id, story_id: laundromat.id, score: 3)
-game12 = Game.create!(user_id: alice.id, story_id: post_office.id, score: 3)
 
 puts 'Creating Chats'
 
 Chat.create!(game_id: game1.id)
-Chat.create!(game_id: game2.id)
 Chat.create!(game_id: game3.id)
-Chat.create!(game_id: game10.id)
+Chat.create!(game_id: game6.id)
+Chat.create!(game_id: game8.id)
 Chat.create!(game_id: game11.id)
-Chat.create!(game_id: game12.id)
-
-
-
 
 puts 'Seed finished!'
