@@ -7,8 +7,9 @@
   </div>
 
   <div id="question">
-    <h3>Question <%= @question.number %> of <%= @story.questions.count %></h3>
-
+    <div class="question-number">
+      <%= render "questions/question_number", score: current_user.games.find_by(story: @story).score %>
+    </div>
     <ul class="flex-container">
       <li class="flex-item intro"><em><%= @question.seducee_introduction %></em></li>
       <li class="flex-item bg-seducee"><%= @question.seducee_phrase %></li>
@@ -16,7 +17,7 @@
     <ul class="flex-container position-right">
       <li class="flex-item intro text-right"><em><%= @question.seducer_introduction %></em></li>
       <li class="flex-item bg-seducer"><%= link_to @question.seducer_answer_A, go_to_url(@question.seducer_answer_A) %></li>
-      <p class="or">or</p>
+      <p class="or"><em>or</em></p>
       <li class="flex-item bg-seducer"><%= link_to @question.seducer_answer_B, go_to_url(@question.seducer_answer_B) %></li>
     </ul>
     <!-- <div><%= @question.correct_answer %></div> -->
