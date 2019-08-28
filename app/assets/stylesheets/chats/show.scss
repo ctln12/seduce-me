@@ -1,3 +1,27 @@
-// .hidden {
-//   visibility: hidden;
-// }
+.chat-intro {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-gap: 10px;
+  margin: 0 20px 20px 20px;
+}
+
+ .chat-details {
+  h1 {
+    margin: 0;
+  }
+  p {
+    margin: 0;
+  }
+}
+
+.messages-screen {
+  border: none;
+  height: 70vh;
+}
+
+input#message_content {
+  position: fixed;
+  bottom: 7px;
+  left: 6.1px;
+  width: 97%;
+}
