@@ -1,12 +1,12 @@
-<% if @question.number == 1 %>
+<% if current_user.games.find_by(story: @story).score == 0 %>
   <i class="fas fa-heart"></i>
   <i class="far fa-heart"></i>
   <i class="far fa-heart"></i>
-<% elsif @question.number == 2 %>
+<% elsif current_user.games.find_by(story: @story).score == 1 %>
   <i class="fas fa-heart"></i>
   <i class="fas fa-heart"></i>
   <i class="far fa-heart"></i>
-<% elsif @question.number == 3 %>
+<% elsif current_user.games.find_by(story: @story).score == 2 %>
   <i class="fas fa-heart"></i>
   <i class="fas fa-heart"></i>
   <i class="fas fa-heart"></i>
