@@ -8,7 +8,7 @@
 
   <div id="question">
     <div class="question-number">
-      <%= render "questions/score", score: current_user.games.find_by(story: @story).score %>
+      <%= render "questions/question_number", score: current_user.games.find_by(story: @story).score %>
     </div>
     <ul class="flex-container">
       <li class="flex-item intro"><em><%= @question.seducee_introduction %></em></li>
