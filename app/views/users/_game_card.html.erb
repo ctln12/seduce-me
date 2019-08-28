@@ -1,0 +1,13 @@
+<div class="story-card d-flex align-items-end" style="background-image: url(<%= image_path(story.photo) %>)">
+  <div>
+    <div class="game-info d-flex align-items-end justify-content-between">
+      <div>
+        <h2><%= story.user.name %></h2>
+        <p class="story-title"><%= story.title %></p>
+      </div>
+      <div class="dashboard-score align-self-end">
+        <%= render "users/game_score", score: story.games.find_by(user: current_user).score %>
+      </div>
+    </div>
+  </div>
+</div>
