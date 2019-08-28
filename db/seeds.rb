@@ -104,27 +104,26 @@ Question.create!(number: 3,
 puts '... of story 4'
 
 Question.create!(number: 1,
-  seducee_introduction: "Tu entres dans une laverie avec ton linge sale quand tu t'aperçois que la fille qui vient de sortir à oublier son tanga dans le tambour et ses clés sur la machine tu sors en courant pour la rattraper...
-Arrivé à sa hauteur vous lui dites qu’elle as oublié quelque chose...",
+  seducee_introduction: "Tu entres dans une laverie avec ton linge sale quand tu t'aperçois que la fille qui vient de sortir à oublier son tanga dans le tambour et ses clés sur la machine. Tu sors en courant pour la rattraper et lui dis qu’elle as oublié quelque chose...",
   seducee_phrase: "Ah oui qu’ai-je donc oublié?",
-  seducer_introduction: "",
+  seducer_introduction: "Que lui réponds-tu?",
   seducer_answer_A: "Votre Tanga super sexy",
   seducer_answer_B: "Vos clefs et un habit",
   correct_answer: "A",
   story_id: laundromat.id)
-Question.create!(number: 2, seducee_introduction: "Un peu gênée elle vous réponds que ce n’est pas à elle... Vous lui montrez les clefs en souriant puis elle se met à rigoler...",
-  seducee_phrase: "Ok tout ceci m’appartiens",
+Question.create!(number: 2, seducee_introduction: "Un peu gênée elle te répond que ce n’est pas à elle... Tu lui montres les clefs en souriant puis elle se met à rigoler...",
+  seducee_phrase: "Ok tout ceci m’appartient",
   seducer_introduction: "",
-  seducer_answer_A: "Ce Tanga sur vous dois être magnifique",
-  seducer_answer_B: "Vous avez un rire très communicatif, je peux vous  invitez à prendre un verre",
+  seducer_answer_A: "Ce tanga sur vous dois être magnifique",
+  seducer_answer_B: "Vous avez un rire très communicatif, je peux vous inviter à prendre un verre ?",
   correct_answer: "B",
   story_id: laundromat.id)
 Question.create!(number: 3,
-  seducee_introduction: "Vous passez un super moment puis elle vous raccompagne à la laverie quand vous apercevez qu’on vous à volé votre sac de linge sale ainsi que vos clés d’appart qui était à l’intérieur...",
-  seducee_phrase: "Mince alors! il t’arrives ce qui à failli m’arriver..",
+  seducee_introduction: "Vous passez un super moment puis elle te raccompagne à la laverie quand vous apercevez qu’on t'a volé ton sac de linge sale ainsi que tes clés d’appartement qui était à l’intérieur...",
+  seducee_phrase: "Mince alors ! Il t’arrive ce qui a failli m’arriver...",
   seducer_introduction: "",
   seducer_answer_A: "Je crois que je vais être obliger de dormir chez toi",
-  seducer_answer_B: "C’est pas grave je connais un bon serrurier et si tu me donne ton numéro, j’aurai tout gagner aujourd’hui.",
+  seducer_answer_B: "C’est pas grave je connais un bon serrurier et si tu me donne ton numéro, j’aurai tout gagné aujourd’hui.",
   correct_answer: "B",
   story_id: laundromat.id)
 
