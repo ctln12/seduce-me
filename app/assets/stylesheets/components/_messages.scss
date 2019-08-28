@@ -3,9 +3,9 @@
   color: black;
   background-color: $seduce-white;
   padding: 5px;
-  border: 1px solid $seduce-blue;
+  // border: 1px solid $seduce-blue;
   // max-height: calc(100vh - 70px - 45px - 61px - 30px);
-  height: 50vh;
+  height: 70vh;
   overflow: scroll;
   // border-color: #5BC4F9;
   border-radius: 10px;
@@ -55,6 +55,10 @@ input.form-control {
   box-shadow: none;
   font-size: 16px;
   color: #868686;
+  position: fixed;
+  bottom: 7px;
+  left: 6.1px;
+  width: 97%;
   &:focus {
     outline: none;
     // border: 1px solid blue;
