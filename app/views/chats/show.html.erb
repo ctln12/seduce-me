@@ -6,7 +6,7 @@
       <div class="messages">
         <% @chat.game.story.questions.each do |question| %>
           <%= render "messages/message", message: question.seducee_phrase, user_is_messages_author: current_user != @chat.game.user %>
-          <% if correct_answer = "A" %>
+          <% if question.correct_answer == "A" %>
             <%= render "messages/message", message: question.seducer_answer_A, user_is_messages_author: current_user == @chat.game.user %>
           <% else %>
             <%= render "messages/message", message: question.seducer_answer_B, user_is_messages_author: current_user == @chat.game.user %>
