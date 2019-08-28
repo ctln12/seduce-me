@@ -20,8 +20,8 @@ puts 'Creating stories...'
 
 airport = Story.create!(title: "A l'aéroport", photo: "airport.jpg", user_id: alice.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
 beach = Story.create!(title: "A la plage", photo: "beach.jpg", user_id: sarah.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
-post_office = Story.create!(title: "A la poste", photo: "post_office.jpg", user_id: jack.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
-laundromat = Story.create!(title: "A la laverie", photo: "laundromat.jpg", user_id: mike.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
+post_office = Story.create!(title: "A la poste", photo: "post_office.jpg", user_id: emma.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
+laundromat = Story.create!(title: "A la laverie", photo: "laundromat.jpg", user_id: elsa.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
 
 puts 'Creating questions...'
 
@@ -130,24 +130,25 @@ Question.create!(number: 3,
 
 puts 'Creating Games'
 
-game1 = Game.create!(user_id: alice.id, story_id: laundromat.id, score: 3)
-game2 = Game.create!(user_id: sarah.id, story_id: laundromat.id, score: 1)
+game1 = Game.create!(user_id: alice.id, story_id: beach.id, score: 3)
+game2 = Game.create!(user_id: sarah.id, story_id: post_office.id, score: 1)
 game3 = Game.create!(user_id: sarah.id, story_id: laundromat.id, score: 3)
-game4 = Game.create!(user_id: emma.id, story_id: airport.id, score: 2)
-game5 = Game.create!(user_id: emma.id, story_id: post_office.id, score: 2)
-game6 = Game.create!(user_id: tom.id, story_id: beach.id, score: 3)
-game7 = Game.create!(user_id: matt.id, story_id: laundromat.id, score: 1)
-game8 = Game.create!(user_id: matt.id, story_id: laundromat.id, score: 3)
-game9 = Game.create!(user_id: elsa.id, story_id: laundromat.id, score: 1)
-game10 = Game.create!(user_id: elsa.id, story_id: laundromat.id, score: 2)
+game4 = Game.create!(user_id: emma.id, story_id: airport.id, score: 3)
+game5 = Game.create!(user_id: emma.id, story_id: laundromat.id, score: 2)
+game6 = Game.create!(user_id: tom.id, story_id: post_office.id, score: 3)
+game7 = Game.create!(user_id: matt.id, story_id: airport.id, score: 3)
+game8 = Game.create!(user_id: matt.id, story_id: beach.id, score: 1)
+game9 = Game.create!(user_id: elsa.id, story_id: airport.id, score: 1)
+game10 = Game.create!(user_id: elsa.id, story_id: beach.id, score: 2)
 game11 = Game.create!(user_id: elsa.id, story_id: laundromat.id, score: 3)
 
 puts 'Creating Chats'
 
 Chat.create!(game_id: game1.id)
 Chat.create!(game_id: game3.id)
+Chat.create!(game_id: game4.id)
 Chat.create!(game_id: game6.id)
-Chat.create!(game_id: game8.id)
+Chat.create!(game_id: game7.id)
 Chat.create!(game_id: game11.id)
 
 puts 'Seed finished!'
