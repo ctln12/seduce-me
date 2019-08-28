@@ -138,9 +138,8 @@ game5 = Game.create!(user_id: emma.id, story_id: laundromat.id, score: 2)
 game6 = Game.create!(user_id: tom.id, story_id: post_office.id, score: 3)
 game7 = Game.create!(user_id: matt.id, story_id: airport.id, score: 3)
 game8 = Game.create!(user_id: matt.id, story_id: beach.id, score: 1)
-game9 = Game.create!(user_id: elsa.id, story_id: airport.id, score: 1)
-game10 = Game.create!(user_id: elsa.id, story_id: beach.id, score: 2)
-game11 = Game.create!(user_id: elsa.id, story_id: laundromat.id, score: 3)
+game9 = Game.create!(user_id: elsa.id, story_id: beach.id, score: 1)
+game10 = Game.create!(user_id: elsa.id, story_id: laundromat.id, score: 3)
 
 puts 'Creating Chats'
 
@@ -149,6 +148,6 @@ Chat.create!(game_id: game3.id)
 Chat.create!(game_id: game4.id)
 Chat.create!(game_id: game6.id)
 Chat.create!(game_id: game7.id)
-Chat.create!(game_id: game11.id)
+Chat.create!(game_id: game10.id)
 
 puts 'Seed finished!'
