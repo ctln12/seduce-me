@@ -3,7 +3,7 @@
     <div class="col-sm-6 col-sm-offset-3">
       <br>
       <%= render "chats/chat_card", story: @chat.game.story, score: @chat.game.score %>
-      <div class="messages">
+      <div class="messages messages-screen">
         <% @chat.game.story.questions.each do |question| %>
           <%= render "messages/message", message: question.seducee_phrase, user_is_messages_author: current_user != @chat.game.user %>
           <% if question.correct_answer == "A" %>
