@@ -1,4 +1,8 @@
+<% if score == 3 %>
 <div class="story-card d-flex align-items-end" style="background-image: url(<%= image_path(story.photo) %>)">
+<% else %>
+<div class="story-card d-flex align-items-end burnt" style="background-image: url(<%= image_path(story.photo) %>);">
+<% end %>
   <div>
     <div class="game-info d-flex align-items-end justify-content-between">
       <div>
