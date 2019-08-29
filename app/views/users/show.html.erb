@@ -11,7 +11,7 @@
 
   <% if !@user.stories.empty? %>
     <hr>
-    <h1>Jeux Creer</h1>
+    <h1>Chats</h1>
     <% @user.stories.each do |story| %>
       <%= render "stories/story_card", story: story %>
       <% story.games.each do |game| %>
