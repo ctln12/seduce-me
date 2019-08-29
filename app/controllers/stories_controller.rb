@@ -24,4 +24,12 @@ class StoriesController < ApplicationController
     @game.score = @questions.count
     @game.save
   end
+
+  private
+
+  def compute_ranking
+    all_games = Game.where(user: current_user)
+    games_won = Game.where(user: current_user, score: 3)
+    (games_won.count.fdiv(all_games.count) * 100).round
+  end
 end
