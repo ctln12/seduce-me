@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
-  before_action :user_is_current_user
+  before_action :user_is_current_user, only: :show
+
+  def index
+  end
+
   def show
     @user = User.find(params[:id])
   end
