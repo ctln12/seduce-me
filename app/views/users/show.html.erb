@@ -8,4 +8,19 @@
       <%= render "users/game_card", story: game.story, score: game.score %>
     <% end %>
   <% end %>
+
+  <% if !@user.stories.empty? %>
+    <hr>
+    <h1>Chats</h1>
+    <% @user.stories.each do |story| %>
+      <%= render "story_creator_card", story: story %>
+      <% story.games.each do |game| %>
+        <% if game.chat %>
+          <%= link_to (game.chat ? chat_path(game.chat) : "#") do %>
+            <%= render "player_card", game: game %>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
 </div>

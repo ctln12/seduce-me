@@ -24,7 +24,7 @@ class ChatsController < ApplicationController
 
   def create
     @story = Story.find(params[:format])
-    @game = Game.find_by(story: @story)
+    @game = Game.where(story: @story).last
     @chat = Chat.new(game: @game)
     @chat.save
 
