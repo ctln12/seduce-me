@@ -214,7 +214,7 @@ Stories[4...].each do |story|
 end
 
 def ranking(user)
-  user.games.where(score: 3).count / user.games.count
+  user.games.where(score: 3).count.to_f / user.games.count.to_f
 end
 
 
@@ -225,6 +225,7 @@ Users[1...].each do |user|
     if story.user != user
       game = Game.create!(user_id: user.id, story_id: story.id, score: rand(1..3))
       user.ranking = ranking(user)
+      user.save
       if game.score == 3
         Chat.create!(game_id: game.id)
       end
