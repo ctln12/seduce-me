@@ -15,7 +15,10 @@
     <% @user.stories.each do |story| %>
       <%= render "stories/story_card", story: story %>
       <% story.games.each do |game| %>
-        <%= link_to (game.chat ? chat_path(game.chat) : "#") do %>
+        <% if game.chat %>
+          <%= link_to (game.chat ? chat_path(game.chat) : "#") do %>
+            <%= render "player_card", game: game %>
+          <% end %>
         <% end %>
       <% end %>
     <% end %>
