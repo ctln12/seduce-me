@@ -1,7 +1,7 @@
 <div class="main-container">
-  <h1>Jeux terminés</h1>
+  <h2>Ceux que j'ai séduit ou pas</h2>
   <% if @user.games.empty? %>
-    You haven't played a game yet!
+    Vous n'avez pas encore participé à un jeu!
   <% end %>
   <% @user.games.each do |game| %>
     <%= link_to (game.chat ? chat_path(game.chat) : "#") do %>
@@ -11,7 +11,7 @@
 
   <% if !@user.stories.empty? %>
     <hr>
-    <h1>Chats</h1>
+    <h2>Ceux qui m'ont séduit(e)</h2>
     <% @user.stories.each do |story| %>
       <%= render "story_creator_card", story: story %>
       <% story.games.each do |game| %>

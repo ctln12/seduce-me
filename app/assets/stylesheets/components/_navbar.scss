@@ -11,6 +11,18 @@
 .navbar-lewagon .navbar-brand img {
   width: 50px;
   border-radius: 50%;
-  padding: 0.1em;
-  // box-shadow: 0 0 10px 10px rgba(255,255,255,0.1)
+  vertical-align: top;
+}
+
+.navbar-brand span {
+  position: relative;
+  top: 11px;
+}
+
+.nav-item img {
+  margin-left: 10px;
+}
+
+.nav-item a.nav-link {
+  font-size: 1.1em;
 }

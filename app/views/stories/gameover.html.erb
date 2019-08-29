@@ -1,7 +1,8 @@
 <div class="photo" style="background-image: url(<%= image_path(Story.find(params[:id]).photo) %>);">
   <div class="centered">
     <h1 class="title">Désolé(e) je n'ai pas été séduit(e)</h1>
-    <h4 class="message-game-end">Ton score: <%= @game.score %> / <%= @questions.count %></h4>
+    <h4 class="message-game-end"><%= render "story_score", score: @game.score %></h4>
+
     <h4 class="button"><%= link_to "Nouveau jeu", "/stories" %></h4>
   </div>
 </div>
