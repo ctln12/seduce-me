@@ -214,7 +214,7 @@ Stories[4...].each do |story|
 end
 
 def ranking(user)
-  user.games.where(score: 3).count.to_f / user.games.count.to_f
+  (user.games.where(score: 3).count.to_f / user.games.count.to_f).round(4)
 end
 
 
