@@ -1,0 +1,15 @@
+<div class="main-container">
+  <h1>Les meilleurs séducteurs</h1>
+
+  <% counter = 0 %>
+  <% @users.each do |user| %>
+
+    <div class="rankings">
+      <p><%= counter += 1 %></p>
+      <%= image_tag("#{user.avatar}", class: "avatar") %>
+      <p><%= user.name %></p>
+      <p><%= user.ranking.to_i %> %</p>
+    </div>
+
+  <% end %>
+</div>
