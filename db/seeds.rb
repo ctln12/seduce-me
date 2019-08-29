@@ -217,6 +217,14 @@ def ranking(user)
   (user.games.where(score: 3).count.to_f / user.games.count.to_f).round(4)
 end
 
+def score_calculator
+  r = rand(2)
+  r += rand(2) if r == 1
+  r += rand(2) if r == 2
+  r
+end
+
+
 
 puts 'Creating Games and chats'
 
