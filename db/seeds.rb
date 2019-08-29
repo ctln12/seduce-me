@@ -29,7 +29,7 @@ puts '... of story 1'
 Question.create!(number: 1,
   seducee_introduction: "Alice, une jeune femme d'affaire attend sa valise mais elle n'arrive pas...",
   seducee_phrase: "Ce n'est pas possible! Ils ont égaré mon bagage!",
-  seducer_introduction: "Tu l'entends et te tournes vers elle. Que dis-tu ?",
+  seducer_introduction: "Tu l'entends et te tournes vers elle.\nQue dis-tu ?",
   seducer_answer_A: "Que fait une belle jeune femme comme vous dans un endroit pareil ?",
   seducer_answer_B: "Puis-je vous aider ? Je travaille ici.",
   correct_answer: "B",
