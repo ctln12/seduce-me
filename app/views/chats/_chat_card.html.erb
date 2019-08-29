@@ -3,6 +3,7 @@
   <div class="chat-details">
     <h1><%= user.name %></h1>
     <p class="story-title">séduit(e) <%= story.title %></p>
-    <p>le 29 août 2019</p>
+    <p>le <%= story.games.find_by(user: current_user).created_at.strftime("%d/%m/%y") %></p>
+    <!-- .strftime("%-d %B %Y") for August -->
   </div>
 </div>
