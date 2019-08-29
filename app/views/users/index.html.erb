@@ -4,7 +4,7 @@
   <% counter = 0 %>
   <% @users.each do |user| %>
 
-    <div style="display: grid; grid-template-columns: auto auto auto auto; grid-gap: 20px">
+    <div class="rankings">
       <p><%= counter += 1 %></p>
       <%= image_tag("#{user.avatar}", class: "avatar") %>
       <p><%= user.name %></p>
