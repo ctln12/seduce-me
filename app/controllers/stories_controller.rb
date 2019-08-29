@@ -34,6 +34,6 @@ class StoriesController < ApplicationController
   def compute_ranking
     all_games = Game.where(user: current_user)
     games_won = Game.where(user: current_user, score: 3)
-    (games_won.count.fdiv(all_games.count) * 100).to_i
+    (games_won.count.fdiv(all_games.count) * 100)
   end
 end
