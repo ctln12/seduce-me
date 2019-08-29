@@ -231,7 +231,7 @@ puts 'Creating Games and chats'
 Users[1...].each do |user|
   Stories.each do |story|
     if story.user != user
-      game = Game.create!(user_id: user.id, story_id: story.id, score: rand(1..3))
+      game = Game.create!(user_id: user.id, story_id: story.id, score: score_calculator)
       user.ranking = ranking(user)
       user.save
       if game.score == 3
