@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!, except: :index
   before_action :user_is_current_user, only: :show
 
   def index
