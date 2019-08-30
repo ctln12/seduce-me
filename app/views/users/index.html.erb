@@ -5,7 +5,7 @@
   <% users_sorted = @users.sort_by { |user| -user.ranking } %>
 
   <% users_sorted.each do |user| %>
-    <div class="rankings">
+    <div class="rankings <%= "ranking-shadow" if current_user == user %>">
       <p><%= counter += 1 %></p>
       <%= image_tag("#{user.avatar}", class: "avatar") %>
       <p><%= user.name %></p>
