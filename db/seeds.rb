@@ -188,21 +188,21 @@ Stories[4...].each do |story|
   seducer_answer_A: "Salut, ça va te paraître fou mais je t’ai vu et je me suis dit que ce serait idiot de ne pas venir te parler.",
   seducer_answer_B: "Hey, est-ce que ton nom serait Wi-Fi ? Parce que je sens qu’on a une connexion.",
   correct_answer: "A",
-  story_id: post_office.id)
+  story_id: story.id)
 Question.create!(number: 2, seducee_introduction: "Elle sourit gentiment et te dit",
   seducee_phrase: "D'accord, et de quoi veut tu me parler!",
   seducer_introduction: "Que lui dis-tu ?",
   seducer_answer_A: "Quand je t'ai vu passer, j'ai eu comme un flash, si tu as un peu de temps j'adorerai qu'on prenne un verre tous les deux",
   seducer_answer_B: "Je voulais de demander si ton père n'était pas un voleur",
   correct_answer: "A",
-  story_id: post_office.id)
+  story_id: story.id)
 Question.create!(number: 3,   seducee_introduction: "Elle accepte, vous passer un agréable moment, une certaine complicité s'installe entre vous...",
   seducee_phrase: "C'était très sympa de discuter avec toi mais là je dois y aller...",
   seducer_introduction: "Que lui dis-tu?",
   seducer_answer_A: "C'est vrai moi aussi, alors on va chez toi ou chez moi?",
   seducer_answer_B: "Ça me ferait super plaisir de te revoir ! On échange nos numéros pour chatter un peu ?",
   correct_answer: "B",
-  story_id: post_office.id)
+  story_id: story.id)
 end
 
 def ranking(user)
