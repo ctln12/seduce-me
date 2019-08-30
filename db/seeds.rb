@@ -55,27 +55,28 @@ Users = [seb, sarah, alice, jack, mike, tom, matt, emma, elsa, aatik, adria, car
 
 puts 'Creating stories...'
 
-airport = Story.create!(title: "à l'aéroport", photo: "airport.jpg", user_id: alice.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
-beach = Story.create!(title: "à la plage", photo: "beach.jpg", user_id: sarah.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
-post_office = Story.create!(title: "à la poste", photo: "post_office.jpg", user_id: jack.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
-laundromat = Story.create!(title: "à la laverie", photo: "laundromat.jpg", user_id: mike.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
-grocery_store = Story.create!(title: "à la Migros", photo: "grocery_store.jpg", user_id: tom.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
-chalet = Story.create!(title: "au chalet", photo: "chalet.jpg", user_id: matt.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
-gym = Story.create!(title: "au fitness", photo: "gym.jpg", user_id: emma.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
-office = Story.create!(title: "au Wagon", photo: "office.jpg", user_id: elsa.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
-boat = Story.create!(title: "en croisière", photo: "boat.jpg", user_id: aatik.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
-train = Story.create!(title: "en train", photo: "train.jpg", user_id: adria.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
-party = Story.create!(title: "en boîte", photo: "party.jpg", user_id: carla.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
-classroom = Story.create!(title: "à l'amphithéatre", photo: "classroom.jpg", user_id: lina.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
-cafe = Story.create!(title: "au café", photo: "cafe.jpg", user_id: eduardo.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
-library = Story.create!(title: "à la bibliothèque", photo: "library.jpg", user_id: erik.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
-garage = Story.create!(title: "au garage", photo: "garage.jpg", user_id: victoria.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
-skiing = Story.create!(title: "au ski", photo: "skiing.jpg", user_id: lilou.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
-skating = Story.create!(title: "à la patinoire", photo: "skating.jpg", user_id: margaux.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
-surfing = Story.create!(title: "au spot de surf", photo: "surfing.jpg", user_id: inaya.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
-cycling = Story.create!(title: "en balade à velo", photo: "cycling.jpg", user_id: esteban.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
-hiking = Story.create!(title: "en randonnée", photo: "hiking.jpg", user_id: alice.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
-wedding = Story.create!(title: "au marriage de ma cousine", photo: "wedding.jpg", user_id: sarah.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
+airport = Story.create!(title: "à l'aéroport", photo: "airport.jpg", user_id: alice.id, greetings: "Bravo, jusqu'à présent tu t'en sors bien, j'ai hâte de découvrire la suite.. Séduis-moi!")
+grocery_store = Story.create!(title: "à la Migros", photo: "grocery_store.jpg", user_id: tom.id, greetings: "Bravo, jusqu'à présent tu t'en sors bien, j'ai hâte de découvrire la suite.. Séduis-moi!")
+beach = Story.create!(title: "à la plage", photo: "beach.jpg", user_id: sarah.id, greetings: "Bravo, jusqu'à présent tu t'en sors bien, j'ai hâte de découvrire la suite.. Séduis-moi!")
+chalet = Story.create!(title: "au chalet", photo: "chalet.jpg", user_id: matt.id, greetings: "Bravo, jusqu'à présent tu t'en sors bien, j'ai hâte de découvrire la suite.. Séduis-moi!")
+post_office = Story.create!(title: "à la poste", photo: "post_office.jpg", user_id: elsa.id, greetings: "Bravo, jusqu'à présent tu t'en sors bien, j'ai hâte de découvrire la suite.. Séduis-moi!")
+gym = Story.create!(title: "au fitness", photo: "gym.jpg", user_id: emma.id, greetings: "Bravo, jusqu'à présent tu t'en sors bien, j'ai hâte de découvrire la suite.. Séduis-moi!")
+laundromat = Story.create!(title: "à la laverie", photo: "laundromat.jpg", user_id: emma.id, greetings: "Bravo, jusqu'à présent tu t'en sors bien, j'ai hâte de découvrire la suite.. Séduis-moi!")
+
+office = Story.create!(title: "au Wagon", photo: "office.jpg", user_id: elsa.id, greetings: "Bravo, jusqu'à présent tu t'en sors bien, j'ai hâte de découvrire la suite.. Séduis-moi!")
+boat = Story.create!(title: "en croisière", photo: "boat.jpg", user_id: aatik.id, greetings: "Bravo, jusqu'à présent tu t'en sors bien, j'ai hâte de découvrire la suite.. Séduis-moi!")
+train = Story.create!(title: "en train", photo: "train.jpg", user_id: adria.id, greetings: "Bravo, jusqu'à présent tu t'en sors bien, j'ai hâte de découvrire la suite.. Séduis-moi!")
+party = Story.create!(title: "en boîte", photo: "party.jpg", user_id: carla.id, greetings: "Bravo, jusqu'à présent tu t'en sors bien, j'ai hâte de découvrire la suite.. Séduis-moi!")
+classroom = Story.create!(title: "à l'amphithéatre", photo: "classroom.jpg", user_id: lina.id, greetings: "Bravo, jusqu'à présent tu t'en sors bien, j'ai hâte de découvrire la suite.. Séduis-moi!")
+cafe = Story.create!(title: "au café", photo: "cafe.jpg", user_id: eduardo.id, greetings: "Bravo, jusqu'à présent tu t'en sors bien, j'ai hâte de découvrire la suite.. Séduis-moi!")
+library = Story.create!(title: "à la bibliothèque", photo: "library.jpg", user_id: erik.id, greetings: "Bravo, jusqu'à présent tu t'en sors bien, j'ai hâte de découvrire la suite.. Séduis-moi!")
+garage = Story.create!(title: "au garage", photo: "garage.jpg", user_id: victoria.id, greetings: "Bravo, jusqu'à présent tu t'en sors bien, j'ai hâte de découvrire la suite.. Séduis-moi!")
+skiing = Story.create!(title: "au ski", photo: "skiing.jpg", user_id: lilou.id, greetings: "Bravo, jusqu'à présent tu t'en sors bien, j'ai hâte de découvrire la suite.. Séduis-moi!")
+skating = Story.create!(title: "à la patinoire", photo: "skating.jpg", user_id: margaux.id, greetings: "Bravo, jusqu'à présent tu t'en sors bien, j'ai hâte de découvrire la suite.. Séduis-moi!")
+surfing = Story.create!(title: "au spot de surf", photo: "surfing.jpg", user_id: inaya.id, greetings: "Bravo, jusqu'à présent tu t'en sors bien, j'ai hâte de découvrire la suite.. Séduis-moi!")
+cycling = Story.create!(title: "en balade à velo", photo: "cycling.jpg", user_id: esteban.id, greetings: "Bravo, jusqu'à présent tu t'en sors bien, j'ai hâte de découvrire la suite.. Séduis-moi!")
+hiking = Story.create!(title: "en randonnée", photo: "hiking.jpg", user_id: alice.id, greetings: "Bravo, jusqu'à présent tu t'en sors bien, j'ai hâte de découvrire la suite.. Séduis-moi!")
+wedding = Story.create!(title: "au marriage de ma cousine", photo: "wedding.jpg", user_id: sarah.id, greetings: "Bravo, jusqu'à présent tu t'en sors bien, j'ai hâte de découvrire la suite.. Séduis-moi!")
 
 Stories = [ airport, beach, post_office, laundromat, grocery_store, chalet, gym,
             office, boat, train, party, classroom, cafe, library, garage, skiing,
@@ -84,133 +85,124 @@ Stories = [ airport, beach, post_office, laundromat, grocery_store, chalet, gym,
 puts 'Creating questions...'
 
 puts '... of story 1'
+
 Question.create!(number: 1,
-  seducee_introduction: "Alice, une jeune femme d'affaire attend sa valise mais elle n'arrive pas...",
-  seducee_phrase: "Ce n'est pas possible! Ils ont égaré mon bagage!",
-  seducer_introduction: "Tu l'entends et te tournes vers elle. Que dis-tu ?",
-  seducer_answer_A: "Que fait une belle jeune femme comme vous dans un endroit pareil ?",
+  seducee_introduction: "Alice, une jeune femme d'affaires attend sa valise, mais elle n'arrive pas...",
+  seducee_phrase: "C'est pas possible! Ils ont égaré mon bagage!",
+  seducer_introduction: "Tu l'entends et te tournes vers elle. Que lui dis-tu ?",
+  seducer_answer_A: "Un peu de patience ma jolie, en attendent passer dans mon bureau!",
   seducer_answer_B: "Puis-je vous aider ? Je travaille ici.",
   correct_answer: "B",
   story_id: airport.id)
 Question.create!(number: 2, seducee_introduction: "Vous vous retrouvez dans un coin tranquille de l'aéroport.",
   seducee_phrase: "Que vais-je faire maintenant? Les clés de mon appartement sont dans ma valise !",
-  seducer_introduction: "Chevalresque, tu veux l'aider. Que proposes-tu ?",
-  seducer_answer_A: "Je vous prête mon téléphone pour appeler vos parents !",
-  seducer_answer_B: "Allons prendre un verre et vous vous en occuperez plus tard !",
+  seducer_introduction: "Tu veux l'aider. Que proposes-tu ?",
+  seducer_answer_A: "Je te prête mon téléphone si tu veux appeler ta mère!",
+  seducer_answer_B: "Allons prendre un verre le temps que votre valise arrive..",
   correct_answer: "B",
   story_id: airport.id)
-Question.create!(number: 3,
-  seducee_introduction: "Vous prenez un verre et tout se passe bien jusqu'à ce que son ex débarque et flirte avec elle. Alice te glisse discrètement..",
+Question.create!(number: 3,   seducee_introduction: "Vous prenez un verre et tout se passe bien jusqu'à ce que son ex débarque et flirte avec elle. Alice te glisse discrètement..",
   seducee_phrase: "Désolée, il n'a pas l'air de vouloir partir...",
   seducer_introduction: "Sa présence vous dérange. Que dis-tu?",
-  seducer_answer_A: "Excusez-moi mais on essaie d'avoir une conversation privée ici!",
+  seducer_answer_A: "Excusez-moi, mais on essaie d'avoir une conversation privée ici!",
   seducer_answer_B: "Voulez-vous vous joindre à nous ?",
   correct_answer: "A",
   story_id: airport.id)
 
 puts '... of story 2'
-Question.create!(number: 1,
-  seducee_introduction: "Alice, une jeune femme d'affaire attend sa valise mais elle n'arrive pas...",
-  seducee_phrase: "Ce n'est pas possible! Ils ont égaré mon bagage!",
-  seducer_introduction: "Tu l'entends et te tournes vers elle. Que dis-tu ?",
-  seducer_answer_A: "Que fait une belle jeune femme comme vous dans un endroit pareil ?",
-  seducer_answer_B: "Puis-je vous aider ? Je travaille ici.",
-  correct_answer: "B",
-  story_id: beach.id)
-Question.create!(number: 2, seducee_introduction: "Vous vous retrouvez dans un coin tranquille de l'aéroport.",
-  seducee_phrase: "Que vais-je faire maintenant? Les clés de mon appartement sont dans ma valise !",
-  seducer_introduction: "Chevalresque, tu veux l'aider. Que proposes-tu ?",
-  seducer_answer_A: "Je vous prête mon téléphone pour appeler vos parents !",
-  seducer_answer_B: "Allons prendre un verre et vous vous en occuperez plus tard !",
-  correct_answer: "A",
-  story_id: beach.id)
-Question.create!(number: 3,
-  seducee_introduction: "Vous prenez un verre et tout se passe bien jusqu'à ce que son ex débarque et flirte avec elle. Alice te glisse discrètement..",
-  seducee_phrase: "Désolée, il n'a pas l'air de vouloir partir...",
-  seducer_introduction: "Sa présence vous dérange. Que dis-tu?",
-  seducer_answer_A: "Excusez-moi mais on essaie d'avoir une conversation privée ici!",
-  seducer_answer_B: "Voulez-vous vous joindre à nous ?",
+
+Question.create!(number: 1,   seducee_introduction: "Après une bonne séance de natation, tu sors de l'eau, torse bombé et muscles saillants. Quand tu t'aperçois qu'une magnifique créature c'est installée sur ta serviette de bain. Tu t'approches... Puis elle te dit",
+  seducee_phrase: "Hey tu me fais de l'ombre là.. Tu veux ruiner mon bronzage ou quoi?!?",
+  seducer_introduction: "Surpris, que lui réponds-tu ?",
+  seducer_answer_A: "Tu crois qu'il y a de la place pour deux sur ma serviette ?",
+  seducer_answer_B: "Désolé pour votre joli bronzage, mais je crois que vous vous êtes trompés de serviette...",
+  correct_answer: "B",   story_id: beach.id)
+Question.create!(number: 2, seducee_introduction: "La fille se retourne, blasée, elle te regarde avec des grands yeux.",
+  seducee_phrase: "Heu! Je crois pas, non!",
+  seducer_introduction: "Que lui réponds-tu?",
+  seducer_answer_A: "Ok, très bien! Je vais voir plus loin si je retrouve ma serviette...",
+  seducer_answer_B: "Tu es gentille ma cocotte, mais ta copine vient juste sortir de l'eau et s'est réinstallée sur serviette à côté de la tienne..",
+  correct_answer: "A",   story_id: beach.id)
+Question.create!(number: 3,   seducee_introduction: "Tu vas voir sa copine et lui expliques la situation",
+  seducee_phrase: "Désolée, mon amie a la tête dure, elle a du te recevoir gaiement...",
+  seducer_introduction: "Vous plaisantez un peu, puis tu lui dis:",
+  seducer_answer_A: "Peux-tu aller la voir s'il te plaît, j’ai pas envie de me faire rembarrer une deuxième fois",
+  seducer_answer_B: "Tu es beaucoup plus sympa que ta copine, je peux m'asseoir moment ? Vu que ma serviette n'est plus disponible...",
   correct_answer: "B",
   story_id: beach.id)
 
 puts '... of story 3'
-Question.create!(number: 1,
-  seducee_introduction: "Alice, une jeune femme d'affaire attend sa valise mais elle n'arrive pas...",
-  seducee_phrase: "Ce n'est pas possible! Ils ont égaré mon bagage!",
-  seducer_introduction: "Tu l'entends et te tournes vers elle. Que dis-tu ?",
-  seducer_answer_A: "Que fait une belle jeune femme comme vous dans un endroit pareil ?",
-  seducer_answer_B: "Puis-je vous aider ? Je travaille ici.",
-  correct_answer: "B",
-  story_id: post_office.id)
-Question.create!(number: 2, seducee_introduction: "Vous vous retrouvez dans un coin tranquille de l'aéroport.",
-  seducee_phrase: "Que vais-je faire maintenant? Les clés de mon appartement sont dans ma valise !",
-  seducer_introduction: "Chevalresque, tu veux l'aider. Que proposes-tu ?",
-  seducer_answer_A: "Je vous prête mon téléphone pour appeler vos parents !",
-  seducer_answer_B: "Allons prendre un verre et vous vous en occuperez plus tard !",
+
+Question.create!(number: 1,   seducee_introduction: "Une femme qui te plaît sort de la poste, tu décides de l’aborder... ",
+  seducee_phrase: "Bonjour, que me voulez-vous?",
+  seducer_introduction: "Que lui dis-tu ?",
+  seducer_answer_A: "Salut, ça va te paraître fou mais je t’ai vu et je me suis dit que ce serait idiot de ne pas venir te parler.",
+  seducer_answer_B: "Hey, est-ce que ton nom serait Wi-Fi ? Parce que je sens qu’on a une connexion.",
   correct_answer: "A",
   story_id: post_office.id)
-Question.create!(number: 3,
-  seducee_introduction: "Vous prenez un verre et tout se passe bien jusqu'à ce que son ex débarque et flirte avec elle. Alice te glisse discrètement..",
-  seducee_phrase: "Désolée, il n'a pas l'air de vouloir partir...",
-  seducer_introduction: "Sa présence vous dérange. Que dis-tu?",
-  seducer_answer_A: "Excusez-moi mais on essaie d'avoir une conversation privée ici!",
-  seducer_answer_B: "Voulez-vous vous joindre à nous ?",
+Question.create!(number: 2, seducee_introduction: "Elle sourit gentiment et te dit",
+  seducee_phrase: "D'accord, et de quoi veut tu me parler!",
+  seducer_introduction: "Que lui dis-tu ?",
+  seducer_answer_A: "Quand je t'ai vu sortir de la poste, j'ai eu comme un flash, si tu as un peu de temps j'adorerai qu'on prenne un verre tous les deux",
+  seducer_answer_B: "Je voulais de demander si ton père n'était pas un voleur",
+  correct_answer: "A",
+  story_id: post_office.id)
+Question.create!(number: 3,   seducee_introduction: "Elle accepte, vous passer un agréable moment, une certaine complicité s'installe entre vous...",
+  seducee_phrase: "C'était très sympa de discuter avec toi mais là je dois y aller...",
+  seducer_introduction: "Que lui dis-tu?",
+  seducer_answer_A: "C'est vrai moi aussi, alors on va chez toi ou chez moi?",
+  seducer_answer_B: "Ça me ferait super plaisir de te revoir ! On échange nos numéros pour chatter un peu ?",
   correct_answer: "B",
   story_id: post_office.id)
 
 
 puts '... of story 4'
 
-Question.create!(number: 1,
-  seducee_introduction: "Tu entres dans une laverie avec ton linge sale quand tu t'aperçois que la fille qui vient de sortir à oublier son tanga dans le tambour et ses clés sur la machine. Tu sors en courant pour la rattraper et lui dis qu’elle as oublié quelque chose...",
-  seducee_phrase: "Ah oui qu’ai-je donc oublié?",
+Question.create!(number: 1,   seducee_introduction: "Tu entres dans une laverie avec ton linge sale quand tu t'aperçois que la fille qui vient de sortir a oublier son tanga dans le tambour et ses clés sur la machine. Tu sors en courant pour la rattraper et lui dis qu’elle a oublié quelque chose...",
+  seducee_phrase: "Ah oui, qu’ai-je donc oublié?",
   seducer_introduction: "Que lui réponds-tu?",
   seducer_answer_A: "Votre Tanga super sexy",
   seducer_answer_B: "Vos clefs et un habit",
-  correct_answer: "A",
-  story_id: laundromat.id)
+  correct_answer: "A",   story_id: laundromat.id)
 Question.create!(number: 2, seducee_introduction: "Un peu gênée elle te répond que ce n’est pas à elle... Tu lui montres les clefs en souriant puis elle se met à rigoler...",
   seducee_phrase: "Ok tout ceci m’appartient",
   seducer_introduction: "",
-  seducer_answer_A: "Ce tanga sur vous dois être magnifique",
+  seducer_answer_A: "Ce tanga sur vous doit être magnifique",
   seducer_answer_B: "Vous avez un rire très communicatif, je peux vous inviter à prendre un verre ?",
   correct_answer: "B",
   story_id: laundromat.id)
-Question.create!(number: 3,
-  seducee_introduction: "Vous passez un super moment puis elle te raccompagne à la laverie quand vous apercevez qu’on t'a volé ton sac de linge sale ainsi que tes clés d’appartement qui était à l’intérieur...",
+Question.create!(number: 3,   seducee_introduction: "Vous passez un super moment puis elle te raccompagne à la laverie quand vous apercevez qu’on t'a volé ton sac de linge sale ainsi que tes clés d’appartement qui était à l’intérieur...",
   seducee_phrase: "Mince alors ! Il t’arrive ce qui a failli m’arriver...",
   seducer_introduction: "",
-  seducer_answer_A: "Je crois que je vais être obliger de dormir chez toi",
-  seducer_answer_B: "C’est pas grave je connais un bon serrurier et si tu me donne ton numéro, j’aurai tout gagné aujourd’hui.",
+  seducer_answer_A: "Je crois que je vais être obligé de dormir chez toi",
+  seducer_answer_B: "C’est pas grave je connais un bon serrurier et si tu me donnes ton numéro, j’aurai tout gagné aujourd’hui.",
   correct_answer: "B",
   story_id: laundromat.id)
 
 puts '... of stories 5 to 20'
 
 Stories[4...].each do |story|
-  Question.create!(number: 1,
-    seducee_introduction: "Tu entres dans une laverie avec ton linge sale quand tu t'aperçois que la fille qui vient de sortir à oublier son tanga dans le tambour et ses clés sur la machine. Tu sors en courant pour la rattraper et lui dis qu’elle as oublié quelque chose...",
-    seducee_phrase: "Ah oui qu’ai-je donc oublié?",
-    seducer_introduction: "Que lui réponds-tu?",
-    seducer_answer_A: "Votre Tanga super sexy",
-    seducer_answer_B: "Vos clefs et un habit",
-    correct_answer: "A",
-    story_id: story.id)
-  Question.create!(number: 2, seducee_introduction: "Un peu gênée elle te répond que ce n’est pas à elle... Tu lui montres les clefs en souriant puis elle se met à rigoler...",
-    seducee_phrase: "Ok tout ceci m’appartient",
-    seducer_introduction: "",
-    seducer_answer_A: "Ce tanga sur vous dois être magnifique",
-    seducer_answer_B: "Vous avez un rire très communicatif, je peux vous inviter à prendre un verre ?",
-    correct_answer: "B",
-    story_id: story.id)
-  Question.create!(number: 3,
-    seducee_introduction: "Vous passez un super moment puis elle te raccompagne à la laverie quand vous apercevez qu’on t'a volé ton sac de linge sale ainsi que tes clés d’appartement qui était à l’intérieur...",
-    seducee_phrase: "Mince alors ! Il t’arrive ce qui a failli m’arriver...",
-    seducer_introduction: "",
-    seducer_answer_A: "Je crois que je vais être obliger de dormir chez toi",
-    seducer_answer_B: "C’est pas grave je connais un bon serrurier et si tu me donne ton numéro, j’aurai tout gagné aujourd’hui.",
-    correct_answer: "B",
-    story_id: story.id)
+  Question.create!(number: 1,   seducee_introduction: "Tu croises une femme qui te plaît. Tu décides de l’aborder... ",
+  seducee_phrase: "Bonjour, que me voulez-vous?",
+  seducer_introduction: "Que lui dis-tu ?",
+  seducer_answer_A: "Salut, ça va te paraître fou mais je t’ai vu et je me suis dit que ce serait idiot de ne pas venir te parler.",
+  seducer_answer_B: "Hey, est-ce que ton nom serait Wi-Fi ? Parce que je sens qu’on a une connexion.",
+  correct_answer: "A",
+  story_id: post_office.id)
+Question.create!(number: 2, seducee_introduction: "Elle sourit gentiment et te dit",
+  seducee_phrase: "D'accord, et de quoi veut tu me parler!",
+  seducer_introduction: "Que lui dis-tu ?",
+  seducer_answer_A: "Quand je t'ai vu passer, j'ai eu comme un flash, si tu as un peu de temps j'adorerai qu'on prenne un verre tous les deux",
+  seducer_answer_B: "Je voulais de demander si ton père n'était pas un voleur",
+  correct_answer: "A",
+  story_id: post_office.id)
+Question.create!(number: 3,   seducee_introduction: "Elle accepte, vous passer un agréable moment, une certaine complicité s'installe entre vous...",
+  seducee_phrase: "C'était très sympa de discuter avec toi mais là je dois y aller...",
+  seducer_introduction: "Que lui dis-tu?",
+  seducer_answer_A: "C'est vrai moi aussi, alors on va chez toi ou chez moi?",
+  seducer_answer_B: "Ça me ferait super plaisir de te revoir ! On échange nos numéros pour chatter un peu ?",
+  correct_answer: "B",
+  story_id: post_office.id)
 end
 
 def ranking(user)
@@ -223,8 +215,6 @@ def score_calculator
   r += rand(2) if r == 2
   r
 end
-
-
 
 puts 'Creating Games and chats'
 
@@ -254,25 +244,4 @@ Users[2..3].each do |user|
   end
 end
 
-
-
-# game1 = Game.create!(user_id: alice.id, story_id: beach.id, score: 3)
-# game2 = Game.create!(user_id: sarah.id, story_id: post_office.id, score: 3)
-# game3 = Game.create!(user_id: jack.id, story_id: laundromat.id, score: 3)
-# game4 = Game.create!(user_id: mike.id, story_id: airport.id, score: 3)
-# game5 = Game.create!(user_id: emma.id, story_id: beach.id, score: 3)
-# game6 = Game.create!(user_id: emma.id, story_id: post_office.id, score: 2)
-# game7 = Game.create!(user_id: elsa.id, story_id: airport.id, score: 1)
-# game8 = Game.create!(user_id: elsa.id, story_id: laundromat.id, score: 3)
-
-# puts 'Creating Chats'
-
-# Chat.create!(game_id: game1.id)
-# Chat.create!(game_id: game2.id)
-# Chat.create!(game_id: game3.id)
-# Chat.create!(game_id: game4.id)
-# Chat.create!(game_id: game5.id)
-# Chat.create!(game_id: game8.id)
-
 puts 'Seed finished!'
-
