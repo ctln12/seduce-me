@@ -18,10 +18,10 @@ elsa = User.create!(name: "Elsa",email: "elsa@gmail.com", password: "123456", av
 
 puts 'Creating stories...'
 
-airport = Story.create!(title: "A l'aéroport", photo: "airport.jpg", user_id: alice.id, greetings: "Bravo, jusqu'à présent tu t'en sors bien, j'ai hâte de découvrire la suite.. Séduis moi!")
-beach = Story.create!(title: "A la plage", photo: "beach.jpg", user_id: sarah.id, greetings: "Bravo, jusqu'à présent tu t'en sors bien, j'ai hâte de découvrire la suite.. Séduis moi!")
-post_office = Story.create!(title: "A la poste", photo: "post_office.jpg", user_id: jack.id, greetings: "Bravo, jusqu'à présent tu t'en sors bien, j'ai hâte de découvrire la suite.. Séduis moi!")
-laundromat = Story.create!(title: "A la laverie", photo: "laundromat.jpg", user_id: mike.id, greetings: "Bravo, jusqu'à présent tu t'en sors bien, j'ai hâte de découvrire la suite.. Séduis moi!")
+airport = Story.create!(title: "A l'aéroport", photo: "airport.jpg", user_id: alice.id, greetings: "Bravo, jusqu'à présent tu t'en sors bien, j'ai hâte de découvrire la suite.. Séduis-moi!")
+beach = Story.create!(title: "A la plage", photo: "beach.jpg", user_id: sarah.id, greetings: "Bravo, jusqu'à présent tu t'en sors bien, j'ai hâte de découvrire la suite.. Séduis-moi!")
+post_office = Story.create!(title: "A la poste", photo: "post_office.jpg", user_id: jack.id, greetings: "Bravo, jusqu'à présent tu t'en sors bien, j'ai hâte de découvrire la suite.. Séduis-moi!")
+laundromat = Story.create!(title: "A la laverie", photo: "laundromat.jpg", user_id: mike.id, greetings: "Bravo, jusqu'à présent tu t'en sors bien, j'ai hâte de découvrire la suite.. Séduis-moi!")
 
 puts 'Creating questions...'
 
@@ -76,20 +76,20 @@ Question.create!(number: 1,   seducee_introduction: "Une femme qui te plaît sor
   seducer_introduction: "Que lui dis-tu ?",
   seducer_answer_A: "Salut, ça va te paraître fou mais je t’ai vu et je me suis dit que ce serait idiot de ne pas venir te parler.",
   seducer_answer_B: "Hey, est-ce que ton nom serait Wi-Fi ? Parce que je sens qu’on a une connexion.",
-  correct_answer: "C",
-  story_id: post_office.id)
-Question.create!(number: 2, seducee_introduction: "Vous vous retrouvez dans un coin tranquille de l'aéroport.",
-  seducee_phrase: "Que vais-je faire maintenant? Les clés de mon appartement sont dans ma valise !",
-  seducer_introduction: "Chevalresque, tu veux l'aider. Que proposes-tu ?",
-  seducer_answer_A: "Je vous prête mon téléphone pour appeler vos parents !",
-  seducer_answer_B: "Allons prendre un verre et vous vous en occuperez plus tard !",
   correct_answer: "A",
   story_id: post_office.id)
-Question.create!(number: 3,   seducee_introduction: "Vous prenez un verre et tout se passe bien jusqu'à ce que son ex débarque et flirte avec elle. Alice te glisse discrètement..",
-  seducee_phrase: "Désolée, il n'a pas l'air de vouloir partir...",
-  seducer_introduction: "Sa présence vous dérange. Que dis-tu?",
-  seducer_answer_A: "Excusez-moi, mais on essaie d'avoir une conversation privée ici!",
-  seducer_answer_B: "Voulez-vous vous joindre à nous ?",
+Question.create!(number: 2, seducee_introduction: "elle sourit gentiment et te dit",
+  seducee_phrase: "D'accord, et de quoi veut tu me parler!",
+  seducer_introduction: "Que lui dis-tu ?",
+  seducer_answer_A: "Quand je t'ai vu sortir de la poste, j'ai eu comme un flash, si tu as un peu de temps j'adorerai qu'on prenne un verre tous les deux",
+  seducer_answer_B: "Je voulais de demander si ton père n'était pas un voleur",
+  correct_answer: "A",
+  story_id: post_office.id)
+Question.create!(number: 3,   seducee_introduction: "Elle accepte, vous passer un agréable moment, une certaine complicité s'installe entre vous..",
+  seducee_phrase: "C'était très sympa de discuter avec toi mais là je dois y aller..",
+  seducer_introduction: "Que lui dis-tu?",
+  seducer_answer_A: "C'est vrai moi aussi, alors on va chez toi ou chez moi?",
+  seducer_answer_B: "Ça me ferait super plaisir de te revoir ! On échange nos numéros pour chatter un peu ?",
   correct_answer: "B",
   story_id: post_office.id)
 
