@@ -62,7 +62,7 @@ laundromat = Story.create!(title: "à la laverie", photo: "laundromat.jpg", user
 grocery_store = Story.create!(title: "à la Migros", photo: "grocery_store.jpg", user_id: tom.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
 chalet = Story.create!(title: "au chalet", photo: "chalet.jpg", user_id: matt.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
 gym = Story.create!(title: "au fitness", photo: "gym.jpg", user_id: emma.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
-office = Story.create!(title: "au le Wagon", photo: "office.jpg", user_id: elsa.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
+office = Story.create!(title: "au Wagon", photo: "office.jpg", user_id: elsa.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
 boat = Story.create!(title: "en croisière", photo: "boat.jpg", user_id: aatik.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
 train = Story.create!(title: "en train", photo: "train.jpg", user_id: adria.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
 party = Story.create!(title: "en boîte", photo: "party.jpg", user_id: carla.id, greetings: "Bravo, tu as réussi à me séduire jusqu'ici! J'ai hâte d'en savoir plus sur toi!")
@@ -228,7 +228,7 @@ end
 
 puts 'Creating Games and chats'
 
-Users[1...].each do |user|
+Users[4..].each do |user|
   Stories.each do |story|
     if story.user != user
       game = Game.create!(user_id: user.id, story_id: story.id, score: score_calculator)
@@ -241,6 +241,18 @@ Users[1...].each do |user|
   end
 end
 
+Users[2..3].each do |user|
+  Stories.sample(3).each do |story|
+    if story.user != user
+      game = Game.create!(user_id: user.id, story_id: story.id, score: score_calculator)
+      user.ranking = ranking(user)
+      user.save
+      if game.score == 3
+        Chat.create!(game_id: game.id)
+      end
+    end
+  end
+end
 
 
 
