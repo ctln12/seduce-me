@@ -26,5 +26,5 @@
 }
 
 .burnt {
-  filter: sepia(90%);//grayscale(0.9);
+  background-blend-mode: saturation;
 }
