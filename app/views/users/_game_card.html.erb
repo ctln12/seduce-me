@@ -8,7 +8,7 @@
         <h2><%= story.user.name %></h2>
         <p class="story-title"><%= story.title %></p>
       </div>
-      <div class="dashboard-score ">
+      <div class="dashboard-score align-self-end">
         <%= render "users/game_score", score: story.games.find_by(user: current_user).score %>
       </div>
     </div>
