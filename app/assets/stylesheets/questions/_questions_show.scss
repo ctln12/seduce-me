@@ -64,6 +64,9 @@ p.or {
 
 .bg-seducer {
   background: $seduce-blue;
+  &:active {
+    background: #00aeff;
+  }
 }
 
 
@@ -77,6 +80,10 @@ li:first-child {
 
 li a {
   color: white;
+  text-decoration: none;
+  &:active {
+    color: white;
+  }
 }
 
 .card p {

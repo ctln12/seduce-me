@@ -2,6 +2,13 @@
   <%= image_tag("#{user.avatar}", class: "avatar-large") %>
   <div class="chat-details">
     <h1><%= user.name %></h1>
-    <p class="story-title"><%= story.title %></p>
+    <p class="story-title">séduit(e) <%= story.title %></p>
+    <% if current_user == story.games.find_by(user: current_user) %>
+      <p>le <%= story.games.find_by(user: current_user).created_at.strftime("%d/%m/%y") %></p>
+    <!-- .strftime("%-d %B %Y") for August -->
+    <% else %>
+    <p>le <%= @chat.game.created_at.strftime("%d/%m/%y") %></p>
+    <!-- .strftime("%-d %B %Y") for August -->
+    <% end %>
   </div>
 </div>

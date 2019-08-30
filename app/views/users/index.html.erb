@@ -2,13 +2,14 @@
   <h1>Les meilleurs séducteurs</h1>
 
   <% counter = 0 %>
-  <% @users.each do |user| %>
+  <% users_sorted = @users.sort_by { |user| -user.ranking } %>
 
-    <div class="rankings">
+  <% users_sorted.each do |user| %>
+    <div class="rankings <%= "ranking-shadow" if current_user == user %>">
       <p><%= counter += 1 %></p>
       <%= image_tag("#{user.avatar}", class: "avatar") %>
       <p><%= user.name %></p>
-      <p><%= user.ranking.to_i %> %</p>
+      <p><%= user.ranking.nil? ? 0 : ( user.ranking * 100 ).round(1) %> %</p>
     </div>
 
   <% end %>
