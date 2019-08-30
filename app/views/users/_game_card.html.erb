@@ -3,15 +3,13 @@
 <% else %>
 <div class="story-card d-flex align-items-end burnt" style="background-image: linear-gradient(black, black), url(<%= image_path(story.photo) %>);">
 <% end %>
-  <div>
-    <div class="game-info d-flex align-items-end justify-content-between">
+  <div class="game-info d-flex justify-content-between">
       <div>
         <h2><%= story.user.name %></h2>
         <p class="story-title"><%= story.title %></p>
       </div>
-      <div class="dashboard-score align-self-end">
+      <div class="dashboard-score ">
         <%= render "users/game_score", score: story.games.find_by(user: current_user).score %>
       </div>
     </div>
-  </div>
 </div>
