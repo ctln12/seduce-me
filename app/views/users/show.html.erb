@@ -4,7 +4,11 @@
     Vous n'avez pas encore participé à un jeu!
   <% end %>
   <% @user.games.each do |game| %>
-    <%= link_to (game.chat ? chat_path(game.chat) : "#") do %>
+    <% if game.score == 3 %>
+      <%= link_to chat_path(game.chat) do %>
+        <%= render "users/game_card", story: game.story, score: game.score %>
+      <% end %>
+    <% else %>
       <%= render "users/game_card", story: game.story, score: game.score %>
     <% end %>
   <% end %>

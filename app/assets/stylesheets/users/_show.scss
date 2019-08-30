@@ -1,5 +1,6 @@
 .game-info {
-  width:325px;
+  width:100%;
+  align-items: stretch
 }
 
 .dashboard-score {
@@ -26,5 +27,14 @@
 }
 
 .burnt {
-  filter: sepia(90%);//grayscale(0.9);
+  background-blend-mode: saturation;
+}
+
+
+.align-self-end {
+  position: relative;
+  // justify-content: flex-end;
+  bottom: 5px;
+  right: 5px;
+  display: block;
 }
